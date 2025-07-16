@@ -23,6 +23,7 @@ Este repositório contém o código-fonte do projeto desenvolvido para a discipl
 - Sol Aniel Martins – SP3118673 - user: Sol-Aniel  
 - Laura Jardim Santos  – SP3116697- user: laura1050santos  
 - Melissa Cardoso Schiavone – SP311600x - user: Moonghosty
+- Ana Marcélia - SP3116069 - user: ryghiuhswf
 
 ---
 
