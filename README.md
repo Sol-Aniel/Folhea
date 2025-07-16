@@ -12,11 +12,10 @@ Este repositório contém o código-fonte do projeto desenvolvido para a discipl
 
 ## Equipe
 
-- Nome Completo 1 – Prontuário 1  
-- Nome Completo 2 – Prontuário 2  
-- Nome Completo 3 – Prontuário 3  
-- Nome Completo 4 – Prontuário 4  
-- Nome Completo 5 – Prontuário 5  
+-Any Gabriely Silva Moraes – SP3118801 - user: any-g  
+-Sol Aniel Martins – SP3118673 - user: Sol-Aniel  
+-Laura Jardim Santos  – - user: laura1050santos  
+- Melissa Cardoso Schiavone – SP311600x - user: Moonghosty
 
 ---
 
