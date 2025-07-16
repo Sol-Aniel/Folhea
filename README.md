@@ -53,3 +53,20 @@ Este repositório contém o código-fonte do projeto desenvolvido para a discipl
 1. Clone este repositório:  
    ```bash
    git clone [link-do-repositorio]
+
+Configure o ambiente Java e Spring Boot.
+
+Configure o banco SQLite conforme instruções específicas (ver seção de configuração).
+
+Execute a aplicação backend e frontend conforme o guia fornecido.
+
+Utilize as tags Git para identificar as entregas:
+
+bash
+Copiar
+Editar
+git tag -a entrega_3bim -m "Entrega do terceiro bimestre"
+git push origin --tags
+
+git tag -a entrega_4bim -m "Entrega do quarto bimestre"
+git push origin --tags
