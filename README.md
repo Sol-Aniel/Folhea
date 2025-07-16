@@ -6,15 +6,22 @@ Este repositório contém o código-fonte do projeto desenvolvido para a discipl
 
 ## Tema Escolhido
 
-**Folhea** – Rede social para entusiastas de livros, onde usuários podem criar perfis, interagir, compartilhar resenhas e acompanhar suas leituras.
+**Folhea** – Rede Social para leitores (Referências: WattPad, Skoob, Goodreads)
+
+- Autenticação: Deverá ser possível criar um usuário e autenticar na aplicação. Todas as operações da aplicação serão vinculadas ao usuário autenticado;
+- O usuário pode criar seu perfil, adicionar seu livros, postar trechos comentados, tags favoritas e comentar em posts de outros usuários;
+- Cada post pode também possuir uma ou mais tags, definidas pelo usuário;
+- O usuário deverá conseguir adicionar avaliações, assim como ser redirecionado para a página de leitura do livro e postar seus próprios trabalhos no formato da aplicação;
+- O perfil deverá conter estatísticas de cada usuário, públicas ou não, contendo seus livros, tempo de leitura, maiores tempos de inatividade, quantidade e qualidade de avaliações, e gêneros/autores mais lidos;
+- O usuários contára com um sistema de salvamento/favoritos (Biblioteca), junto de abas de busca por tags, títulos, autores e gêneros, e um sistema de página estilo For You.
 
 ---
 
 ## Equipe
 
--Any Gabriely Silva Moraes – SP3118801 - user: any-g  
--Sol Aniel Martins – SP3118673 - user: Sol-Aniel  
--Laura Jardim Santos  – - user: laura1050santos  
+- Any Gabriely Silva Moraes – SP3118801 - user: any-g  
+- Sol Aniel Martins – SP3118673 - user: Sol-Aniel  
+- Laura Jardim Santos  – SP3116697- user: laura1050santos  
 - Melissa Cardoso Schiavone – SP311600x - user: Moonghosty
 
 ---
