@@ -9,6 +9,7 @@ For further reference, please consider the following sections:
 * [Spring Data JPA](https://docs.spring.io/spring-boot/3.5.6/reference/data/sql.html#data.sql.jpa-and-spring-data)
 * [Thymeleaf](https://docs.spring.io/spring-boot/3.5.6/reference/web/servlet.html#web.servlet.spring-mvc.template-engines)
 * [Spring Boot DevTools](https://docs.spring.io/spring-boot/3.5.6/reference/using/devtools.html)
+* [Validation](https://docs.spring.io/spring-boot/3.5.6/reference/io/validation.html)
 
 ### Guides
 The following guides illustrate how to use some features concretely:
@@ -16,6 +17,7 @@ The following guides illustrate how to use some features concretely:
 * [Accessing Data with JPA](https://spring.io/guides/gs/accessing-data-jpa/)
 * [Handling Form Submission](https://spring.io/guides/gs/handling-form-submission/)
 * [Accessing data with MySQL](https://spring.io/guides/gs/accessing-data-mysql/)
+* [Validation](https://spring.io/guides/gs/validating-form-input/)
 
 ### Maven Parent overrides
 
