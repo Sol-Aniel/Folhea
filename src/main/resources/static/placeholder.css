@@ -70,6 +70,65 @@
           text-decoration: underline;
         }
 
+
+        .cadastro-box {
+          background: #fff;
+          padding: 30px;
+          border-radius: 10px;
+          box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+          width: 300px;
+          text-align: center;
+        }
+
+        .cadastro-box h2 {
+          margin-bottom: 20px;
+          font-size: 24px;
+          font-weight: bold;
+        }
+
+        .cadastro-box label {
+          display: block;
+          text-align: left;
+          margin: 10px 0 5px;
+          font-size: 14px;
+          font-weight: bold;
+        }
+
+        .cadastro-box input {
+          width: 100%;
+          padding: 10px;
+          margin-bottom: 15px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+        }
+
+        .cadastro-box button {
+          width: 100%;
+          padding: 10px;
+          background-color: #007BFF;
+          border: none;
+          border-radius: 5px;
+          color: #fff;
+          font-size: 16px;
+          cursor: pointer;
+        }
+
+        .cadastro-box button:hover {
+          background-color: #0056b3;
+        }
+
+        .cadastro-box a {
+          display: block;
+          margin-top: 15px;
+          text-decoration: none;
+          color: #007BFF;
+          font-size: 14px;
+        }
+
+        .cadastro-box a:hover {
+          text-decoration: underline;
+        }
+
         .error-message {
           margin-top: 10px;
           padding: 8px;

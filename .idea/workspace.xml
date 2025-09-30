@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1f8b7a7d-8714-41a2-87a2-9cd2a046b3f4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/placeholder.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/appFolhea/Folhea/dataConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/appFolhea/Folhea/dataConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/placeholder.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/placeholder.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/cadastro.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/cadastro.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
     </list>
@@ -53,6 +50,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Folhea.executor": "Run",
     "Gradle./home/estudante2/Documentos/GitHub/Folhea/build.gradle.executor": "Run",
     "Gradle.Build Folhea.executor": "Run",
     "Gradle.Build Folhea_demo.executor": "Run",
@@ -64,7 +62,7 @@
     "Spring Boot.FolheaApplication.executor": "Run",
     "git-widget-placeholder": "demo-(gradle)",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/estudante2/Documentos/GitHub/Folhea",
+    "last_opened_file_path": "/home/estudante1/Documentos/GitHub/Folhea",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
