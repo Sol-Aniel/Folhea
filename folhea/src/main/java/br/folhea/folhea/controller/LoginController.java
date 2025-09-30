@@ -17,12 +17,12 @@ public class LoginController {
     private UsuarioRepository ur;
 
     @GetMapping("/login")
-    public String login(){
+    public String login() {
         return "login";
     }
 
     @GetMapping("/")
-    public String dashboard(){
+    public String dashboard() {
         return "index";
     }
 
@@ -38,31 +38,19 @@ public class LoginController {
         return "login";
     }
 
-
-
-
-
-
-
-
-
-
-
-
     @GetMapping("/cadastroUsuario")
-    public String cadastro(){
+    public String cadastro() {
         return "cadastro";
     }
 
-    @RequestMapping (value = "/cadastroUsuario", method = RequestM<ethod.POST)
-    public String cadastroUsuario(@Valid Usuario usuario, BindingResult result){
+    @RequestMapping(value = "/cadastroUsuario", method = RequestM < ethod.POST)
+    public String cadastroUsuario(@Valid Usuario usuario, BindingResult result) {
 
-        if (result.hasErrors()){
+        if (result.hasErrors()) {
             return "redirect:/cadastroUsuario";
         }
 
         ur.save(usuario);
         return "redirect:/login";
     }
-
 }

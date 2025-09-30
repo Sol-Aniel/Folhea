@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página Inicial</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    h1{
+font-family: cursive;
+}
+
+    
+    body {
+      background-color: #f5f5f5;
+      color: #333;
+    }
+
+    header {
+      background-color: #E9D0EE;
+      padding: 5px;
+      text-align: right;
+      color: white;
+    }
+
+    header h1 {
+      font-size: 18px;
+    }
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 10px;
+    height: 50px;        
+    box-sizing: border-box;
+    background-color: #E9D0EE;
+}
+
+
+header .logo {
+    display: block;     
+    height: 40px;         
+    width: auto;          
+    object-fit: contain;  
+}
+
+
+header nav a {
+  color: rgb(122, 0, 126);
+  text-decoration: none;
+  margin-left: 15px;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+header nav a:hover {
+  color: #9700bd;
+}
+
+
+    nav {
+      display: flex;
+      justify-content: right;
+      gap: 20px;
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 5px 10px;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+
+    nav a:hover {
+      background-color: rgba(155, 0, 142, 0.534);
+    }
+
+ main {
+  background-color: #E6BAEF;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+  padding: 40px 20px;
+  min-height: 80vh;
+  text-align: left;       
+}
+
+
+    main h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    main p {
+      font-size: 18px;
+      margin-bottom: 30px;
+      max-width: 600px;
+    }
+
+    main button {
+      background-color: #dd90ec;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    main button:hover {
+      background-color: #E9ACF5;
+    }
+
+    footer {
+      background-color: #ca49e4;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+  .galeria {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); 
+  gap: 10px;
+  justify-items: start;
+}
+
+.galeria img {
+  width: 100px;   
+  height: 150px;  
+  object-fit: cover;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+}
+
+.galeria img:hover {
+  transform: scale(1.05);
+}
+
+.emAlta {
+  margin-left: 10px; 
+  text-align: left;   }
+
+.emAlta h1 {
+  color: #4b005a;   
+  margin-bottom: 15px;
+  size: 100px;
+}
+
+.emAlta .galeria {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); 
+  gap: 10px;
+  justify-items: start; 
+}
+.livros-container {
+  display: flex;       
+  gap: 150px;           
+  align-items: flex-start; 
+}
+
+.imagem-lateral img {
+  width: 500px;       
+  height: auto;       
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.comentariosUser img{
+  width: 400px;   
+  height: auto;  
+  object-fit: cover;
+  border-radius: 5px;
+  grid-template-columns: repeat(1, 1fr); 
+  
+  
+
+}
+.comentariosUser h1 {
+  color: #4b005a;      
+  margin: 0 0 5px 0;
+  text-align: left;  
+}
+
+
+  </style>
+
+<link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+  <header>
+     <img src="logoMenor.png" alt="Logo">
+    <nav>
+
+      <a href="#">Início</a>
+      <a href="#">Login</a>
+      <a href="#">Cadastro</a>
+    </nav>
+  </header>
+
+  <main>
+    
+    <div class="comentariosUser">
+        <h1>O que nossos usuários comentam:</h1>
+        <img src="1.png" alt="Imagem 1">
+        <img src="2.png" alt="Imagem 2">
+        <img src="3.png" alt="Imagem 3">
+    </div>
+    <div class="emAlta">
+  <h1>Histórias em Alta</h1>
+  <div class="livros-container">
+    <div class="galeria">
+      <img src="livro1.jpeg" alt="Imagem 1">
+      <img src="livro2.jpeg" alt="Imagem 2">
+      <img src="livro3.jpeg" alt="Imagem 3">
+      <img src="livro4.jpeg" alt="Imagem 4">
+      <img src="livro5.jpeg" alt="Imagem 5">
+      <img src="livro6.jpeg" alt="Imagem 6">
+      <img src="livro7.jpeg" alt="Imagem 7">
+      <img src="livro8.jpeg" alt="Imagem 8">
+      <img src="livro9.jpeg" alt="Imagem 9">
+      <img src="livro10.jpeg" alt="Imagem 10">
+    </div>
+    <div class="imagem-lateral">
+      <img src="4.png" alt="Destaque">
+    </div>
+  </div>
+</div>
+
+
+  </main>
+
+  <footer>
+    &copy; 2025 Folhea - Todos os direitos reservados
+  </footer>
+</body>
+</html>
+
