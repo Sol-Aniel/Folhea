@@ -12,9 +12,7 @@
       font-family: Arial, sans-serif;
     }
 
-    h1{
-font-family: cursive;
-}
+
 
     
     body {
@@ -96,7 +94,7 @@ header nav a:hover {
 
 
     main h2 {
-      font-size: 24px;
+      font-size: 65px;
       margin-bottom: 20px;
     }
 
@@ -192,6 +190,28 @@ header nav a:hover {
   margin: 0 0 5px 0;
   text-align: left;  
 }
+.romance {
+  display: flex;          /* Coloca imagem e texto lado a lado */
+  align-items: center;    /* Centraliza verticalmente */
+  gap: 100px;              /* Espaço entre imagem e texto */
+  margin-top: 30px;       /* Espaço em relação ao bloco anterior */
+}
+
+.romance img {
+  width: 500px;           /* Reduzi a largura pra caber melhor */
+  height: auto;
+  border-radius: 5px;
+}
+
+.generos {
+  max-width: 1000px;       /* Limita a largura do texto */
+}
+
+.generos h2 {
+  color: #4b005a;
+  margin-bottom: 15px;
+  font-size: 70px;
+}
 
 
   </style>
@@ -215,10 +235,12 @@ header nav a:hover {
     
     <div class="comentariosUser">
         <h1>O que nossos usuários comentam:</h1>
-        <img src="1.png" alt="Imagem 1">
+        <div class="imgComent">
         <img src="2.png" alt="Imagem 2">
+        <img src="1.png" alt="Imagem 1">
+        
         <img src="3.png" alt="Imagem 3">
-    </div>
+    </div></div>
     <div class="emAlta">
   <h1>Histórias em Alta</h1>
   <div class="livros-container">
@@ -235,11 +257,17 @@ header nav a:hover {
       <img src="livro10.jpeg" alt="Imagem 10">
     </div>
     <div class="imagem-lateral">
-      <img src="4.png" alt="Destaque">
+      <img src="lendoo.png" alt="Destaque">
     </div>
   </div>
+  
 </div>
-
+<div class="romance">
+    <img src="8.png" alt="kiss">
+    <div class="generos">
+    <h2>Todos os gêneros em um só lugar!!</h2>
+    <p>Aqui você encontra romance, terror, fantasia e muito mais.</p></div>
+</div>
 
   </main>
 
