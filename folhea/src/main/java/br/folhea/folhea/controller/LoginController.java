@@ -7,17 +7,47 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import br.folhea.folhea.model.Usuario;
+import br.folhea.folhea.repository.UsuarioRepository;
 import jakarta.validation.Valid;
 
 @Controller
 public class LoginController {
 
+    @Autowired
     private UsuarioRepository ur;
 
     @GetMapping("/login")
     public String login(){
         return "login";
     }
+
+    @GetMapping("/")
+    public String dashboard(){
+        return "index";
+    }
+
+    @PostMapping("/logar")
+    public String loginUsuario(Usuario usuario, Model model, HttpServletResponse response) {
+        Usuario usuarioLogado = this.ur.login(usuario.getEmail(), usuario.getSenha());
+        if (usuarioLogado != null) {
+            return "redirect:/"
+
+        }
+
+        model.addAttribute("erro", "Usuario invalido!");
+        return "login/login";
+    }
+
+
+
+
+
+
+
+
+
+
+
 
     @GetMapping("/cadastroUsuario")
     public String cadastro(){
@@ -32,8 +62,7 @@ public class LoginController {
         }
 
         ur.save(usuario);
-
-        return "";
+        return "redirect:/login";
     }
 
 }
