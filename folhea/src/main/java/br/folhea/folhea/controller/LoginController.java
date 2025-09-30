@@ -1,7 +1,8 @@
 package br.folhea.folhea.controller;
 
+import br.folhea.folhea.repository.UsuarioRepository;
 import org.springframework.stereotype.Controller;
-import org.springframework.validation.BiningResult;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -24,7 +25,7 @@ public class LoginController {
         return "cadastro";
     }
 
-    @RequestMapping (value = "/cadastroUsuario", method = RequestM<ethod.POST)
+    @RequestMapping (value = "/cadastroUsuario", method = RequestMethod.POST)
     public String cadastroUsuario(@Valid Usuario usuario, BindingResult result){
 
         if (result.hasErrors()){
