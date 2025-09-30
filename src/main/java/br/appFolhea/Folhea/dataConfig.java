@@ -14,19 +14,30 @@ public class dataConfig {
     @Bean
     public DataSource dataSource(){
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
-        dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
-        dataSource.setUrl("jdbc:mysql://localhost:3306/++++?useTimezone=true&serverTimezone=UTC");
-        dataSource.setUsername("");
+        // Bd temporário
+        dataSource.setDriverClassName("org.h2.Driver");
+        dataSource.setUrl("jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1"); // Banco H2 em memória
+        dataSource.setUsername("sa");
         dataSource.setPassword("");
+
+        //dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
+        //dataSource.setUrl("jdbc:mysql://localhost:3306/my_database?useTimezone=true&serverTimezone=UTC");
+        //dataSource.setUsername("myusername");
+        //dataSource.setPassword("mypassword");
         return  dataSource;
     }
     @Bean
     public JpaVendorAdapter jpaVendorAdapter(){
         HibernateJpaVendorAdapter adapter = new HibernateJpaVendorAdapter();
-        adapter.setDatabase(Database.MYSQL);
-        adapter.setShowSql( true);
+        // Bd temporário
+        adapter.setDatabase(Database.H2);
+        adapter.setShowSql(true);
         adapter.setGenerateDdl(true);
-        adapter.setDatabasePlatform("org.hibernate.dialect.MariaDBDialect");
+
+        //adapter.setDatabase(Database.MYSQL);
+        //adapter.setShowSql( true);
+        //adapter.setGenerateDdl(true);
+        //adapter.setDatabasePlatform("org.hibernate.dialect.MariaDBDialect");
         return adapter;
 
     }
