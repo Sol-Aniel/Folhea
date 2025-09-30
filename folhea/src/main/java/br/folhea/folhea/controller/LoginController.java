@@ -35,7 +35,7 @@ public class LoginController {
         }
 
         model.addAttribute("erro", "Usuario invalido!");
-        return "login/login";
+        return "login";
     }
 
 
