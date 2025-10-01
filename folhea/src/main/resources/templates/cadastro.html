@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
+<head><!DOCTYPE html>
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -39,6 +42,7 @@
 
 
         .cadastro-box {
+            position: relative;
             background: rgba(255, 255, 255, 0.9);
             padding: 30px;
             border-radius: 10px;
@@ -52,6 +56,7 @@
             font-size: 24px;
             font-weight: bold;
         }
+
 
         .cadastro-box label {
             display: block;
@@ -90,19 +95,31 @@
             text-decoration: none;
             color: #ebebeb;
             font-size: 14px;
+            align-items: left;
         }
 
         .cadastro-box a:hover {
             text-decoration: underline;
         }
 
-       
+        .cadastro-box .voltar {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
     </style>
 </head>
 
 <body>
-    <div class="cadastro-box">
-        <h2>Cadastro</h2>
+    <div class="cadastro-box"> <a href="index.html" class="voltar"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                viewBox="0 -960 960 960" width="24px" fill="#1f1f1f">
+                <path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z" />
+            </svg></a>
+        <div class="titulo">
+
+
+            <h2>Cadastro</h2>
+        </div>
         <form>
             <label for="email">E-mail</label>
             <input type="text" id="email" placeholder="Digite seu melhor email">
@@ -115,7 +132,8 @@
             <label for="senhaConfirm">Confirme sua senha</label>
             <input type="password" id="confirm" placeholder="Confirme a senha">
 
-            <button type="submit" ><a href="login.html">Enviar</a></button>
+            <button type="submit"><a href="login.html">Enviar</a></button>
+            
             <a href="login.html">Já tem uma conta? Entrar</a>
 
         </form>
