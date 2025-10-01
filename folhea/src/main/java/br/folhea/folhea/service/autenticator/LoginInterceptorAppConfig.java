@@ -16,7 +16,7 @@ public class LoginInterceptorAppConfig implements WebMvcConfigurer {
         registry.addInterceptor(loginInterceptor).excludePathPatterns(
 
                 "/login", "/logar", "/cadastroUsuario",
-                "/css/**", "/images/**", "/js/**"
+                "/css/**", "/images/**", "/js/**", "/**"
         );
     }
 }
