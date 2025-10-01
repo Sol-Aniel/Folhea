@@ -15,18 +15,19 @@ public class Dataconfig {
     public DataSource dataSource(){
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
-        dataSource.setUrl("jdbc:mysql://localhost:3306/root?useTimezone=true&serverTimezone=UTC");
+        dataSource.setUrl("jdbc:mysql://localhost:3306/folhea?useTimezone=true&serverTimezone=UTC");
         dataSource.setUsername("root");
-        dataSource.setPassword("123123");
+        dataSource.setPassword("folhea_app");
         return  dataSource;
     }
     @Bean
     public JpaVendorAdapter jpaVendorAdapter(){
         HibernateJpaVendorAdapter adapter = new HibernateJpaVendorAdapter();
         adapter.setDatabase(Database.MYSQL);
-        adapter.setShowSql( true);
+        adapter.setShowSql(true);
         adapter.setGenerateDdl(true);
         adapter.setDatabasePlatform("org.hibernate.dialect.MariaDBDialect");
+        adapter.setPrepareConnection(true);
         return adapter;
 
     }

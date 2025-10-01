@@ -4,7 +4,49 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e6611edb-801d-4115-b498-c8ae24fff185" name="Changes" comment="" />
+    <list default="true" id="e6611edb-801d-4115-b498-c8ae24fff185" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/folhea/src/main/java/br/folhea/folhea/Dataconfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/src/main/java/br/folhea/folhea/Dataconfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/folhea/src/main/java/br/folhea/folhea/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/src/main/java/br/folhea/folhea/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/folhea/src/main/java/br/folhea/folhea/dataConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/folhea/src/main/java/br/folhea/folhea/repository/UsuarioRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/src/main/java/br/folhea/folhea/repository/UsuarioRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/folhea/src/main/java/br/folhea/folhea/service/CookieService.java" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/src/main/java/br/folhea/folhea/service/CookieService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/folhea/src/main/java/br/folhea/folhea/service/autenticator/LoginInterceptorAppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/src/main/java/br/folhea/folhea/service/autenticator/LoginInterceptorAppConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/folhea/src/main/java/br/folhea/folhea/service/autenticator/Logininterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/src/main/java/br/folhea/folhea/service/autenticator/LoginInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/folhea/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/folhea/src/main/resources/templates/1.png" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/src/main/resources/static/images/1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/folhea/src/main/resources/templates/2.png" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/src/main/resources/static/images/2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/folhea/src/main/resources/templates/3.png" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/src/main/resources/static/images/3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/folhea/src/main/resources/templates/4.png" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/src/main/resources/static/images/4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/folhea/src/main/resources/templates/8.png" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/src/main/resources/static/images/8.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/folhea/src/main/resources/templates/background.png" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/src/main/resources/static/images/background.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/folhea/src/main/resources/templates/cadastro.html" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/src/main/resources/templates/cadastro.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/folhea/src/main/resources/templates/fundoOpcoes.png" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/src/main/resources/static/images/fundoOpcoes.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/folhea/src/main/resources/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/src/main/resources/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/folhea/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/folhea/src/main/resources/templates/lendoo.png" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/src/main/resources/static/images/lendoo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/folhea/src/main/resources/templates/livro1.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/src/main/resources/static/images/livro1.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/folhea/src/main/resources/templates/livro10.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/src/main/resources/static/images/livro10.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/folhea/src/main/resources/templates/livro2.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/src/main/resources/static/images/livro2.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/folhea/src/main/resources/templates/livro3.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/src/main/resources/static/images/livro3.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/folhea/src/main/resources/templates/livro4.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/src/main/resources/static/images/livro4.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/folhea/src/main/resources/templates/livro5.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/src/main/resources/static/images/livro5.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/folhea/src/main/resources/templates/livro6.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/src/main/resources/static/images/livro6.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/folhea/src/main/resources/templates/livro7.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/src/main/resources/static/images/livro7.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/folhea/src/main/resources/templates/livro8.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/src/main/resources/static/images/livro8.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/folhea/src/main/resources/templates/livro9.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/src/main/resources/static/images/livro9.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/folhea/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/src/main/resources/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/folhea/src/main/resources/templates/logoMenor.png" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/src/main/resources/static/images/logoMenor.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/folhea/src/main/resources/templates/opcoesPerfil.html" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/src/main/resources/templates/opcoesPerfil.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/folhea/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/folhea/target/classes/br/folhea/folhea/Dataconfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/target/classes/br/folhea/folhea/Dataconfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/folhea/target/classes/br/folhea/folhea/FolheaApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/target/classes/br/folhea/folhea/FolheaApplication.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,14 +74,41 @@
   "keyToString": {
     "DefaultHtmlFileTemplate": "HTML File",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "SHELLCHECK.PATH": "C:\\Users\\melsc\\AppData\\Roaming\\JetBrains\\IntelliJIdea2025.2\\plugins\\Shell Script\\shellcheck.exe",
+    "Spring Boot.FolheaApplication.executor": "Run",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/melsc/Documents/GitHub/Folhea"
+    "last_opened_file_path": "C:/Users/melsc/Documents/GitHub/Folhea",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ianjo\OneDrive\IFSP\flask\Folhea\folhea\src\main\resources\templates" />
+      <recent name="C:\Users\ianjo\OneDrive\IFSP\flask\Folhea\folhea\src\main\resources\static\images" />
+      <recent name="C:\Users\ianjo\OneDrive\IFSP\flask\Folhea\folhea\src\main\resources\static" />
+      <recent name="C:\Users\ianjo\OneDrive\IFSP\flask\Folhea\folhea\src\main\resources" />
+      <recent name="C:\Users\ianjo\OneDrive\IFSP\flask\Folhea\folhea\src\main\resources\templates\static\images" />
+    </key>
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="br.folhea.folhea.service.autenticator" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="Folhea" />
@@ -52,11 +121,20 @@
       <option name="filePath" />
       <method v="2" />
     </configuration>
+    <configuration name="FolheaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="folhea" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="br.folhea.folhea.FolheaApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.25557.131" />
+        <option value="bundled-jdk-9823dce3aa75-fbdcb00ec9e3-intellij.indexing.shared.core-IU-251.25410.129" />
+        <option value="bundled-js-predefined-d6986cc7102b-6a121458b545-JavaScript-IU-251.25410.129" />
       </set>
     </attachedChunks>
   </component>
@@ -67,7 +145,11 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1759170488647</updated>
+      <workItem from="1759323785397" duration="9609000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
 </project>
