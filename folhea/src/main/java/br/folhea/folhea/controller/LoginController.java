@@ -22,7 +22,8 @@ public class LoginController {
     }
 
     @GetMapping("/")
-    public String dashboard() {
+    public String dashboard(Model model, HttpServeletRequest request) {
+        model.addAtribute("nome", CookieService.getCookie(request, "nomeUsuario"))
         return "index";
     }
 
@@ -30,6 +31,10 @@ public class LoginController {
     public String loginUsuario(Usuario usuario, Model model, HttpServletResponse response) {
         Usuario usuarioLogado = this.ur.login(usuario.getEmail(), usuario.getSenha());
         if (usuarioLogado != null) {
+
+            CookieService.setCookie(response, "UsuarioId", String.valueOf(usuarioLogado.getId()), 10000)
+            CookieService.setCookie(response, "UsuarioNome", String.valueOf(usuarioLogado.getNome()), 10000)
+
             return "redirect:/"
 
         }
