@@ -6,10 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="e6611edb-801d-4115-b498-c8ae24fff185" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/folhea/src/main/java/br/folhea/folhea/service/autenticator/LoginInterceptorAppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/src/main/java/br/folhea/folhea/service/autenticator/LoginInterceptorAppConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/folhea/src/main/resources/static/css/auth.css" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/src/main/resources/static/css/auth.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/folhea/target/classes/br/folhea/folhea/Dataconfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/target/classes/br/folhea/folhea/Dataconfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/folhea/target/classes/br/folhea/folhea/service/autenticator/LoginInterceptorAppConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/target/classes/br/folhea/folhea/service/autenticator/LoginInterceptorAppConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/folhea/target/classes/static/css/auth.css" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/target/classes/static/css/auth.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/folhea/target/classes/static/css/perfil.css" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/target/classes/static/css/perfil.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/folhea/target/classes/templates/cadastro.html" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/target/classes/templates/cadastro.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +108,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1759170488647</updated>
-      <workItem from="1759323785397" duration="10291000" />
+      <workItem from="1759323785397" duration="12073000" />
     </task>
     <servers />
   </component>
