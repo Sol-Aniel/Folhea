@@ -2,7 +2,7 @@ body {
             margin: 0;
             font-family: Arial, sans-serif;
             height: 100vh;
-            background: url('fundoOpcoes.png') center/cover no-repeat;
+            background: url('/static/images/fundoOpcoes.png') center/cover no-repeat;
             display: flex;
             justify-content: center;
             align-items: flex-start;
