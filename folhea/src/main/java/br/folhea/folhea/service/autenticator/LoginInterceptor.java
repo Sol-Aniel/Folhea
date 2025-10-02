@@ -13,7 +13,7 @@ import java.io.UnsupportedEncodingException;
 public class LoginInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws IOException {
-        if (CookieService.getCookie(request, "usuarioId") != null) {
+        if (CookieService.getCookie(request, "UsuarioId") != null) {
             return true;
         }
         response.sendRedirect("/login");

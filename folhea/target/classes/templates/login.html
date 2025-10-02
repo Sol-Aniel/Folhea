@@ -17,19 +17,20 @@
                 <path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z" />
             </svg></a>
         <h2>Login</h2>
-        <form>
+        <form method="POST" action="#" th:action="@{/logar}" th:object="${usuario}">
             <label for="email">E-mail</label>
-            <input type="text" id="email" placeholder="Digite seu nome de usuário">
+            <input type="text" id="email" placeholder="Digite seu nome de usuário" th:field="*{email}" required/>
 
             <label for="senha">Senha</label>
-            <input type="password" id="senha" placeholder="Digite sua senha">
-
-
+            <input type="password" id="senha" placeholder="Digite sua senha" th:field="*{senha}" required/>
 
             <button type="submit">Entrar</button>
             <a th:href="@{/cadastroUsuario}">Registrar-se</a>
 
-            <div class="error-message">Usuário ou senha inválidos!</div>
+            <div th:if="${param.error}" class="error-message">
+                Usuário ou senha inválidos!
+            </div>
+
         </form>
     </div>
 </body>

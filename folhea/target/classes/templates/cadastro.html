@@ -19,21 +19,26 @@
 
             <h2>Cadastro</h2>
         </div>
-        <form>
+        <form action="#" th:action="@{/cadastroUsuario}" method="POST" th:object="${usuario}">
             <label for="email">E-mail</label>
-            <input type="text" id="email" placeholder="Digite seu melhor email">
+            <input type="text" id="email" placeholder="Digite seu melhor email" th:field="*{email}" required />
             <label for="user">Nome de usuário</label>
-            <input type="text" id="user" placeholder="Digite seu nome de usuário">
+            <input type="text" id="user" placeholder="Digite seu nome de usuário" th:field="*{nome}" required />
 
             <label for="senha">Senha</label>
-            <input type="password" id="senha" placeholder="Digite sua senha">
+            <input type="password" id="senha" placeholder="Digite sua senha" th:field="*{senha}" required />
 
-            <label for="senhaConfirm">Confirme sua senha</label>
-            <input type="password" id="confirm" placeholder="Confirme a senha">
+            <label for="confirmSenha">Confirmar Senha:</label>
+            <!-- esse campo não precisa estar no Entity, pode ser só no DTO -->
+            <input type="password" id="confirmSenha" name="confirmSenha" placeholder="Digite sua senha" required />
 
             <button type="submit"><a th:href="@{/login}">Enviar</a></button>
             
             <a th:href="@{/login}">Já tem uma conta? Entrar</a>
+
+            <div th:if="${param.error}" class="error-message">
+                Usuário ou senha inválidos!
+            </div>
 
         </form>
     </div>

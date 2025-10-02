@@ -5,10 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e6611edb-801d-4115-b498-c8ae24fff185" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/folhea/src/main/java/br/folhea/folhea/service/UsuarioService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/folhea/target/classes/static/css/auth.css" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/target/classes/static/css/auth.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/folhea/target/classes/static/css/perfil.css" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/target/classes/static/css/perfil.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/folhea/src/main/java/br/folhea/folhea/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/src/main/java/br/folhea/folhea/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/folhea/src/main/java/br/folhea/folhea/repository/UsuarioRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/src/main/java/br/folhea/folhea/repository/UsuarioRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/folhea/src/main/java/br/folhea/folhea/service/autenticator/LoginInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/src/main/java/br/folhea/folhea/service/autenticator/LoginInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/folhea/src/main/java/br/folhea/folhea/service/autenticator/LoginInterceptorAppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/src/main/java/br/folhea/folhea/service/autenticator/LoginInterceptorAppConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/folhea/src/main/resources/templates/cadastro.html" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/src/main/resources/templates/cadastro.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/folhea/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/folhea/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/src/main/resources/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/folhea/target/classes/br/folhea/folhea/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/target/classes/br/folhea/folhea/controller/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/folhea/target/classes/br/folhea/folhea/repository/UsuarioRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/target/classes/br/folhea/folhea/repository/UsuarioRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/folhea/target/classes/br/folhea/folhea/service/autenticator/LoginInterceptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/target/classes/br/folhea/folhea/service/autenticator/LoginInterceptor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/folhea/target/classes/br/folhea/folhea/service/autenticator/LoginInterceptorAppConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/target/classes/br/folhea/folhea/service/autenticator/LoginInterceptorAppConfig.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/folhea/target/classes/templates/cadastro.html" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/target/classes/templates/cadastro.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/folhea/target/classes/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/target/classes/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/folhea/target/classes/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/target/classes/templates/login.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +32,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -109,6 +123,7 @@
       <option name="presentableId" value="Default" />
       <updated>1759170488647</updated>
       <workItem from="1759323785397" duration="12073000" />
+      <workItem from="1759423516933" duration="4403000" />
     </task>
     <servers />
   </component>
