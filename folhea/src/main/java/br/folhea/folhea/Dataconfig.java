@@ -15,7 +15,7 @@ public class Dataconfig {
     public DataSource dataSource(){
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
-        dataSource.setUrl("jdbc:mysql://192.168.0.3:3306/root?useSSL=false&serverTimezone=UTC");
+        dataSource.setUrl("jdbc:mysql://192.168.0.3:3306/root?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC");
         dataSource.setUsername("root");
         dataSource.setPassword("folhea_app");
         return  dataSource;

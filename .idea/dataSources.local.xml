@@ -7,5 +7,11 @@
       <schema-mapping />
       <load-sources>user_and_system_sources</load-sources>
     </data-source>
+    <data-source name="root@192.168.0.3" uuid="a33c112d-0c86-4ab2-8439-c62230044003">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="MYSQL" />
+      <user-name>root</user-name>
+      <schema-mapping />
+      <load-sources>user_and_system_sources</load-sources>
+    </data-source>
   </component>
 </project>
