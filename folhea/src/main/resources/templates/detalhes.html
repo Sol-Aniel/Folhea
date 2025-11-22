@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>História: Título do Livro</title>
+    
+    <link rel="stylesheet" type="text/css" th:href="@{/css/detalhes.css}">
+    
+        <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+                <img th:src="@{/img/logoMenor.png}" alt="Logo">
+        <form class="search-bar" action="#" method="GET">
+            <input type="text" name="busca" placeholder="Pesquisar...">
+            <button type="submit"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                    width="24px" fill="#1f1f1f">
+                    <path
+                        d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z" />
+                </svg></button>
+        </form>
+
+        <nav>
+                        <a th:href="@{/home.html}"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                    width="24px" fill="#1f1f1f">
+                    <path
+                        d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z" />
+                </svg></a>
+            <a th:href="@{/biblioteca.html}"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                    width="24px" fill="#1f1f1f">
+                    <path
+                        d="M240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h480q33 0 56.5 23.5T800-800v640q0 33-23.5 56.5T720-80H240Zm0-80h480v-640h-80v280l-100-60-100 60v-280H240v640Zm0 0v-640 640Zm200-360 100-60 100 60-100-60-100 60Z" />
+                </svg></a>
+            <a th:href="@{/criar_historia.html}"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                    width="24px" fill="#1f1f1f">
+                    <path
+                        d="M200-200h57l391-391-57-57-391 391v57Zm-80 80v-170l528-527q12-11 26.5-17t30.5-6q16 0 31 6t26 18l55 56q12 11 17.5 26t5.5 30q0 16-5.5 30.5T817-647L290-120H120Zm640-584-56-56 56 56Zm-141 85-28-29 57 57-29-28Z" />
+                </svg></a>
+            <a th:href="@{/notifications.html}"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                    width="24px" fill="#1f1f1f">
+                    <path
+                        d="M160-200v-80h80v-280q0-83 50-147.5T420-792v-28q0-25 17.5-42.5T480-880q25 0 42.5 17.5T540-820v28q80 20 130 84.5T720-560v280h80v80H160Zm320-300Zm0 420q-33 0-56.5-23.5T400-160h160q0 33-23.5 56.5T480-80ZM320-280h320v-280q0-66-47-113t-113-47q-66 0-113 47t-47 113v280Z" />
+                </svg></a>
+            <a th:href="@{/perfil.html}"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                    width="24px" fill="#1f1f1f">
+                    <path
+                        d="M234-276q51-39 114-61.5T480-360q69 0 132 22.5T726-276q35-41 54.5-93T800-480q0-133-93.5-226.5T480-800q-133 0-226.5 93.5T160-480q0 59 19.5 111t54.5 93Zm246-164q-59 0-99.5-40.5T340-580q0-59 40.5-99.5T480-720q59 0 99.5 40.5T620-580q0 59-40.5 99.5T480-440Zm0 360q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q53 0 100-15.5t86-44.5q-39-29-86-44.5T480-280q-53 0-100 15.5T294-220q39 29 86 44.5T480-160Zm0-360q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43q0 26 17 43t43 17Zm0-60Zm0 360Z" />
+                </svg></a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="historia-capa-area">
+                        <img th:src="@{/img/livro1.jpeg}" alt="Capa do Livro"> 
+            <div class="detalhes-header">
+                <h1>Título</h1>
+                <p class="autor">por NomeDoSeuUsuário</p>
+                
+                <div class="stats">
+                    <p>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960" width="18px" fill="#4b005a">
+                            <path d="M480-320q75 0 127.5-52.5T660-500q0-75-52.5-127.5T480-680q-75 0-127.5 52.5T300-500q0 75 52.5 127.5T480-320Zm0-80q-42 0-71-29t-29-71q0-42 29-71t71-29q42 0 71 29t29 71q0 42-29 71t-71 29Zm0 360q-125 0-226.5-62.5T40-500q53-100 154.5-162.5T480-720q125 0 226.5 62.5T920-500q-53 100-154.5 162.5T480-280Z"/>
+                        </svg>
+                        12.5k Leituras
+                    </p>
+                    <p>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960" width="18px" fill="#4b005a">
+                            <path d="m362-246 118-71 118 71-31-137 104-101-143-21-60-130-60 130-143 21 104 101-31 137ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h480q33 0 56.5 23.5T800-800v640q0 33-23.5 56.5T720-80H240Zm0-80h480v-640H240v640Zm240-300Z"/>
+                        </svg>
+                        800 Votos
+                    </p>
+                    <p>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960" width="18px" fill="#4b005a">
+                            <path d="M400-80q-66 0-113-47t-47-113v-640h480v640q0 66-47 113t-113 47H400Zm0-80h320v-640H400v640ZM240-240v-560h80v560h-80Zm0 80v-80h-80v80h80Zm240-400Zm-240-80Z"/>
+                        </svg>
+                        25 Capítulos
+                    </p>
+                </div>
+                
+                <div class="actions">
+                                        <a th:href="@{/leitura.html}" class="btn-primary">Ler Primeiro Capítulo</a>
+                    <button class="btn-secundario">+ Adicionar à Biblioteca</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="historia-conteudo">
+            <div class="sinopse-area">
+                <h3>Sinopse</h3>
+                                <p>Esta é a sinopse do livro, que será injetada dinamicamente pelo Thymeleaf usando um atributo como th:text="${historia.sinopse}".</p>
+            </div>
+            
+            <div class="lista-capitulos">
+                <h3>Capítulos</h3>
+                
+                <ul th:each="capitulo : ${capitulos}">
+                    <li class="capitulo-item">
+                        <a th:href="@{/leitura/{id}(id=${capitulo.id})}" th:text="${capitulo.titulo}">Título do Capítulo (Placeholder)</a>
+                        <span class="data-publicacao" th:text="${capitulo.data}">Data de publicação</span>
+                    </li>
+                </ul>
+                
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2025 Folhea - Todos os direitos reservados
+    </footer>
+</body>
+
+</html>
