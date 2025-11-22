@@ -1,10 +1,12 @@
 package br.folhea.folhea.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.NotEmpty;
+import lombok.Getter;
+
+import java.util.ArrayList;
+import java.util.List;
+
 
 
 @Entity
@@ -46,6 +48,7 @@ public class Usuario {
     public long getId() {
         return id;
     }
+
 
 
 }
