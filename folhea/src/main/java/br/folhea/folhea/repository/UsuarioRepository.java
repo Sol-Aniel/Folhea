@@ -14,9 +14,6 @@ public interface UsuarioRepository extends CrudRepository<Usuario, String> {
 
     Optional<Usuario> findByEmail(String email);
 
-//    @Query(value="select * from folhea.usuario where email = :email and senha = :senha", nativeQuery = true)
-//    public Usuario login(String email, String senha);
-
 
 
 }
