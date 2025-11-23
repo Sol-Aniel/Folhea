@@ -3,6 +3,7 @@ package br.folhea.folhea.model;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotEmpty;
 import lombok.Getter;
+import lombok.Setter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,9 +16,12 @@ public class Usuario {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
     private long id;
+    @Setter
     @NotEmpty
     private String nome;
+    @Setter
     private String email;
+    @Setter
     private String senha;
 
 
@@ -25,24 +29,12 @@ public class Usuario {
         return nome;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
     public String getEmail() {
         return email;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
     public String getSenha() {
         return senha;
-    }
-
-    public void setSenha(String senha) {
-        this.senha = senha;
     }
 
     public long getId() {
