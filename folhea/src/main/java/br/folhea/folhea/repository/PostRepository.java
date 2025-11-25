@@ -10,4 +10,3 @@ public interface PostRepository extends JpaRepository<Post,Long> {
     List<Post> findPostByUsuario(Usuario usuario);
 
 }
-

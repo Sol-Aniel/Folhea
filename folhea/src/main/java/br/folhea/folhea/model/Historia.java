@@ -1,6 +1,5 @@
 package br.folhea.folhea.model;
 
-import br.folhea.folhea.repository.HistoriaRepository;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -20,6 +19,9 @@ public class Historia  {
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "historia_sq")
     @SequenceGenerator(schema = "folhea", name = "historia_sq", sequenceName ="historia_sq", initialValue = 1) // valores em sequencia
     private Long id;
+
+    @Column(name="status")
+    private StatusHistoria status;
 
     @Column(name ="titulo")
     private String titulo;

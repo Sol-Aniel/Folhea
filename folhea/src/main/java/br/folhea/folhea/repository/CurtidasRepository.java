@@ -13,4 +13,3 @@ mostrar numero de curtidas
  */
 
 }
-
