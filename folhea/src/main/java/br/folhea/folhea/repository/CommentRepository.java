@@ -5,7 +5,7 @@ import br.folhea.folhea.model.Historia;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.CrudRepository;
 
-public interface CommentRepository extends CrudRepository<Comment, Long> {
+public interface CommentRepository extends JpaRepository<Comment, Long> {
 /*
 salvar comentario ja vem no crud
 editar ja vem no crud
@@ -15,3 +15,4 @@ mostrar todos os comentarios de uma publicação ja vem no crud
 
 
 }
+
