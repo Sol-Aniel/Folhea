@@ -35,6 +35,8 @@ public class Comment {
     @JoinColumn(name = "post_id")
     private Post post;
 
-
+    @ManyToOne
+    @JoinColumn(name = "historia_id")
+    private Historia historia;
 
 }
