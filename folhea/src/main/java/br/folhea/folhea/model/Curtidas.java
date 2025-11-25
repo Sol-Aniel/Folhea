@@ -36,9 +36,14 @@ public class Curtidas {
     private Post post;
 
     @ManyToOne
+    @JoinColumn(name = "historia_id")
+    private Historia historia;
+
+    @ManyToOne
     @JoinColumn(name = "usuario_id")
     private Usuario usuario;
 
 
 }
+
 
