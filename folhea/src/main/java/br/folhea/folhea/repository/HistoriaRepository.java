@@ -1,11 +1,14 @@
 package br.folhea.folhea.repository;
 
 import br.folhea.folhea.model.Historia;
-import org.springframework.data.repository.CrudRepository;
+import br.folhea.folhea.model.Usuario;
+import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
 
-public interface HistoriaRepository extends CrudRepository <Historia, Long>{
+public interface HistoriaRepository extends JpaRepository<Historia, Long> {
 
     List<Historia> findByTitulo(String titulo);
+
+    List<Historia> findAllByUsuario(Usuario usuario);
 }
