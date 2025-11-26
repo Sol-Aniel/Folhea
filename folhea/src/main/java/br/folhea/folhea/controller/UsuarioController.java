@@ -15,9 +15,11 @@ import org.springframework.web.bind.annotation.*;
 public class UsuarioController {
 
     private final UsuarioService usuarioService;
+    private final UsuarioRepository usuarioRepository;
 
-    public UsuarioController(UsuarioService usuarioService) {
+    public UsuarioController(UsuarioService usuarioService, UsuarioRepository usuarioRepository) {
         this.usuarioService = usuarioService;
+        this.usuarioRepository = usuarioRepository;
     }
 //    @GetMapping("/registrar")
     //public String telaRegistrar(Model model) {
@@ -80,7 +82,7 @@ public class UsuarioController {
                 return "redirect:/login";
             }
             Long id = Long.valueOf(idStr);
-            Usuario usuario = usuarioService.findById(id)
+            Usuario usuario = usuarioRepository.findById(id)
                     .orElseThrow(() -> new RuntimeException("Usuário não encontrado."));
             model.addAttribute("usuario", usuario);
             return "perfil";

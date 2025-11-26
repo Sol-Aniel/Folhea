@@ -1,88 +1,73 @@
 package br.folhea.folhea.controller;
 
-import br.folhea.folhea.model.Usuario;
 import br.folhea.folhea.service.CookieService;
+//import ch.qos.logback.core.model.Model;
 import br.folhea.folhea.service.UsuarioService;
-
+import org.springframework.ui.Model;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import jakarta.validation.Valid;
-
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
+
+import br.folhea.folhea.model.Usuario;
+import br.folhea.folhea.repository.UsuarioRepository;
+import jakarta.validation.Valid;
 
 import java.io.UnsupportedEncodingException;
 
 @Controller
-@RequestMapping("/")
 public class LoginController {
 
+    @Qualifier("usuarioService")
+
     @Autowired
-    private UsuarioService usuarioService;
+    private UsuarioService uservice;
 
     @GetMapping("/login")
     public String login(Model model) {
-        model.addAttribute("usuario", new Usuario());
+        Usuario usuario = new Usuario();
+        model.addAttribute("usuario", usuario);
         return "login";
     }
 
-    @GetMapping
-    public String index(Model model, HttpServletRequest request) throws UnsupportedEncodingException {
-
+    @GetMapping("/")
+    public String dashboard(Model model, HttpServletRequest request) throws UnsupportedEncodingException {
         String nomeUsuario = CookieService.getCookie(request, "UsuarioNome");
-
-        // Se não tiver cookie = visitante
         if (nomeUsuario == null || nomeUsuario.isBlank()) {
             nomeUsuario = "Visitante";
         }
-
-        model.addAttribute("nome", nomeUsuario);
+        model.addAttribute("nome",nomeUsuario);
         return "index";
     }
 
-    @PostMapping("/logar")
-    public String logar(
-            @Valid @ModelAttribute("usuario") Usuario usuario,
-            BindingResult result,
-            Model model,
-            HttpServletResponse response
-    ) throws UnsupportedEncodingException {
+    @RequestMapping(value = "/logar", method = RequestMethod.POST)
+    public String loginUsuario(Model model, @Valid Usuario usuario, BindingResult result, HttpServletResponse response) throws UnsupportedEncodingException {
+        Usuario usuarioLogado = uservice.login(usuario.getEmail(), usuario.getSenha());
+        if (usuarioLogado != null) {
 
-        if (result.hasErrors()) {
-            return "login";
+            CookieService.setCookie(response, "UsuarioId", String.valueOf(usuarioLogado.getId()), 10000);
+            CookieService.setCookie(response, "UsuarioNome", String.valueOf(usuarioLogado.getNome()), 10000);
+
+            return "redirect:/";
+
         }
 
-        // Tenta login
-        Usuario usuarioLogado = usuarioService.login(usuario.getEmail(), usuario.getSenha());
-
-        if (usuarioLogado == null) {
-            model.addAttribute("error", "Usuário ou senha inválidos.");
-            return "login";
-        }
-
-        // Criar cookies do usuário
-        CookieService.setCookie(response, "UsuarioId", String.valueOf(usuarioLogado.getId()), 86400);
-        CookieService.setCookie(response, "UsuarioNome", usuarioLogado.getNome(), 86400);
-
-        return "redirect:/";
+        model.addAttribute("error", "Usuario invalido!");
+        return "login";
     }
 
-    @GetMapping("cadastroUsuario")
+    @GetMapping("/cadastroUsuario")
     public String cadastro(Model model) {
-        model.addAttribute("usuario", new Usuario());
+        Usuario usuario = new Usuario();
+        model.addAttribute("usuario", usuario);
         return "cadastro";
     }
 
-    @PostMapping("cadastroUsuario")
-    public String cadastrarUsuario(
-            @Valid @ModelAttribute("usuario") Usuario usuario,
-            BindingResult result,
-            @RequestParam("confirmSenha") String confirmSenha,
-            Model model
-    ) {
+    @RequestMapping(value = "/cadastroUsuario", method = RequestMethod.POST)
+    public String cadastroUsuario(Model model, @Valid Usuario usuario, BindingResult result, @RequestParam("confirmSenha")String confirmSenha) {
 
         if (result.hasErrors()) {
             return "cadastro";
@@ -93,17 +78,7 @@ public class LoginController {
             return "cadastro";
         }
 
-        usuarioService.cadastrar(usuario);
-        return "redirect:/login";
-    }
-
-
-    @GetMapping("logout")
-    public String logout(HttpServletResponse response) throws UnsupportedEncodingException {
-
-        CookieService.setCookie(response, "UsuarioId", "", 0);
-        CookieService.setCookie(response, "UsuarioNome", "", 0);
-
+        uservice.cadastrar(usuario);
         return "redirect:/login";
     }
 }
