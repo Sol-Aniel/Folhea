@@ -4,7 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e6611edb-801d-4115-b498-c8ae24fff185" name="Changes" comment="" />
+    <list default="true" id="e6611edb-801d-4115-b498-c8ae24fff185" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/folhea/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/folhea/src/main/java/br/folhea/folhea/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/src/main/java/br/folhea/folhea/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/folhea/src/main/java/br/folhea/folhea/model/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/src/main/java/br/folhea/folhea/model/Usuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/folhea/src/main/java/br/folhea/folhea/service/CommentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/src/main/java/br/folhea/folhea/service/CommentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/folhea/src/main/java/br/folhea/folhea/service/UsuarioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/src/main/java/br/folhea/folhea/service/UsuarioService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/folhea/target/classes/br/folhea/folhea/model/Usuario.class" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/target/classes/br/folhea/folhea/model/Usuario.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/folhea/target/classes/br/folhea/folhea/repository/UsuarioRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/target/classes/br/folhea/folhea/repository/UsuarioRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/folhea/target/classes/br/folhea/folhea/service/UsuarioService.class" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/target/classes/br/folhea/folhea/service/UsuarioService.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -107,6 +119,7 @@
       <workItem from="1759423516933" duration="5478000" />
       <workItem from="1763660160833" duration="1853000" />
       <workItem from="1763742641558" duration="8396000" />
+      <workItem from="1763836571838" duration="740000" />
     </task>
     <servers />
   </component>
