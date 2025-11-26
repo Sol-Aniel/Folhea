@@ -7,7 +7,6 @@ import br.folhea.folhea.service.HistoriaService;
 import br.folhea.folhea.repository.UsuarioRepository;
 
 import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -39,10 +38,10 @@ public class HistoriaController {
     @GetMapping("")
     public String listarHistorias(Model model, HttpServletRequest request) {
 
-        model.addAttribute("historias", historiaService.listarHistorias());
+        model.addAttribute("listas", historiaService.listarHistorias()); // <-- Mude o nome da variável
         model.addAttribute("usuarioLogado", getUsuarioLogado(request));
 
-        return "listasLeitura"; // templates/historias/lista.html
+        return "listasLeitura";
     }
 
     @GetMapping("/{id}")
@@ -64,8 +63,8 @@ public class HistoriaController {
     public String paginaNovaHistoria(HttpServletRequest request, Model model) {
 
         Usuario logado = getUsuarioLogado(request);
-        if (logado == null)
-            return "redirect:/login";
+        //if (logado == null)
+          //  return "redirect:/login";
 
         model.addAttribute("historia", new Historia());
         model.addAttribute("usuarioLogado", logado);
@@ -75,20 +74,25 @@ public class HistoriaController {
     @PostMapping("/nova")
     public String salvarHistoria(
             @RequestParam String titulo,
+            @RequestParam String sinopse,
+            @RequestParam String tag,
             @RequestParam String texto,
             HttpServletRequest request,
             Model model
     ) {
-
         Usuario logado = getUsuarioLogado(request);
-        if (logado == null)
-            return "redirect:/login";
+       // if (logado == null)
+         //   return "redirect:/login";
 
         try {
             Historia h = new Historia();
             h.setTitulo(titulo);
             h.setTextContent(texto);
             h.setUsuario(logado);
+            h.setSinopse(sinopse);
+            h.setTag(tag);
+
+
 
             historiaService.salvarHistoria(h);
 
@@ -97,7 +101,7 @@ public class HistoriaController {
         } catch (Exception e) {
             model.addAttribute("erro", e.getMessage());
             model.addAttribute("usuarioLogado", logado);
-            return "historias/form";
+            return "redirect:/historias/nova";
         }
     }
 

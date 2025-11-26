@@ -44,6 +44,12 @@ public class Historia  {
     @JoinColumn(name = "usuario_id")
     private Usuario usuario;
 
+    @Column(name="tag")
+    private String tag;
+
+    @Column(name = "sinopse")
+    private String sinopse;
+
 
 
 }

@@ -32,7 +32,17 @@ public class LoginController {
         model.addAttribute("usuario", usuario);
         return "login";
     }
+    @GetMapping("/home")
+    public String home(Model model, HttpServletRequest request) throws UnsupportedEncodingException  {
+        String nomeUsuario = CookieService.getCookie(request, "UsuarioNome");
 
+        if (nomeUsuario == null || nomeUsuario.isBlank()) {
+            nomeUsuario = "Visitante";
+        }
+        model.addAttribute("nome",nomeUsuario);
+
+        return "home";
+    }
     @GetMapping("/")
     public String dashboard(Model model, HttpServletRequest request) throws UnsupportedEncodingException {
         String nomeUsuario = CookieService.getCookie(request, "UsuarioNome");
@@ -51,7 +61,7 @@ public class LoginController {
             CookieService.setCookie(response, "UsuarioId", String.valueOf(usuarioLogado.getId()), 10000);
             CookieService.setCookie(response, "UsuarioNome", String.valueOf(usuarioLogado.getNome()), 10000);
 
-            return "redirect:/";
+            return "redirect:/home";
 
         }
 
