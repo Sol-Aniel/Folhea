@@ -1,0 +1,244 @@
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Georgia, 'Times New Roman', Times, serif; /* Fonte de leitura tradicional */
+        }
+
+        body {
+            background-color: #FAFAFA; /* Fundo muito claro, quase branco */
+            color: #1c1c1c; /* Texto escuro */
+            line-height: 1.8;
+            font-size: 1.1em;
+            overflow-x: hidden;
+        }
+
+        /* CABEÇALHO DE LEITURA (MINIMALISTA) */
+        .leitura-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #E9D0EE;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            z-index: 100;
+        }
+
+        .leitura-header h1 {
+            font-size: 20px;
+            color: #4b005a;
+            margin: 0;
+            font-weight: bold;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .leitura-header .close-btn {
+            text-decoration: none;
+            color: #4b005a;
+            font-size: 24px;
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: color 0.3s, background 0.3s;
+        }
+
+        .leitura-header .close-btn:hover {
+            color: white;
+            background-color: #ca49e4;
+        }
+
+        /* CONTEÚDO PRINCIPAL DE LEITURA */
+        main {
+            max-width: 800px; /* Largura ideal para conforto na leitura */
+            margin: 50px auto 40px auto; /* Adiciona margem superior para compensar o cabeçalho fixo */
+            padding: 40px 30px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+            min-height: 100vh; /* Garante que o fundo branco seja visível */
+        }
+
+        .capitulo-titulo {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+        }
+
+        .capitulo-titulo h2 {
+            font-family: 'Satisfy', cursive;
+            font-size: 32px;
+            color: #dd90ec;
+            margin-bottom: 5px;
+            font-weight: normal;
+        }
+
+        .capitulo-titulo h3 {
+            font-size: 20px;
+            color: #4b005a;
+            font-weight: bold;
+        }
+
+        .texto-capitulo p {
+            margin-bottom: 1.5em;
+            text-align: justify;
+            text-indent: 1.5em; /* Recuo de parágrafo para leitura tradicional */
+        }
+
+        /* NAVEGAÇÃO ENTRE CAPÍTULOS */
+        .nav-capitulos {
+            margin-top: 50px;
+            display: flex;
+            justify-content: space-between;
+            border-top: 1px solid #ccc;
+            padding-top: 20px;
+        }
+
+        .nav-capitulos a {
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background 0.3s, color 0.3s;
+            font-size: 16px;
+        }
+
+        .nav-capitulos .btn-anterior {
+            color: #4b005a;
+            border: 1px solid #4b005a;
+        }
+
+        .nav-capitulos .btn-proximo {
+            background-color: #dd90ec;
+            color: white;
+            border: 1px solid #dd90ec;
+        }
+
+        .nav-capitulos .btn-anterior:hover {
+            background-color: #4b005a;
+            color: white;
+        }
+
+        .nav-capitulos .btn-proximo:hover {
+            background-color: #ca49e4;
+            border-color: #ca49e4;
+        }
+
+        .nav-capitulos .disabled {
+            color: #ccc;
+            border-color: #ccc;
+            cursor: not-allowed;
+            background: #f0f0f0;
+            pointer-events: none; /* Desabilita o clique */
+        }
+        /* Estilos Refinados para Comentários (dentro de leitura.html) */
+.secao-comentarios {
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 1px solid #ccc;
+}
+
+.secao-comentarios h3 {
+    color: #4b005a;
+    font-size: 22px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Formulário */
+.form-comentario textarea {
+    width: 100%;
+    min-height: 80px;
+    padding: 15px;
+    border: 1px solid #E9D0EE; /* Borda suave */
+    border-radius: 8px; /* Cantos mais arredondados */
+    margin-bottom: 10px;
+    font-size: 16px;
+    resize: vertical;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.form-comentario textarea:focus {
+    border-color: #dd90ec; /* Borda destacada no foco */
+}
+
+.form-comentario button {
+    background-color: #dd90ec;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px; /* Botão pilular */
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+    float: right;
+    margin-bottom: 15px;
+}
+
+.form-comentario button:hover {
+    background-color: #ca49e4;
+}
+
+/* Link para todos os comentários */
+.link-todos-comentarios {
+    clear: both;
+    text-align: center;
+    margin-top: 20px;
+    padding-bottom: 10px;
+}
+
+.link-todos-comentarios a {
+    color: #7a007e; /* Roxo escuro */
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 14px;
+    display: block;
+    padding: 5px;
+    border-bottom: 1px dashed #E9D0EE;
+}
+
+.link-todos-comentarios a:hover {
+    color: #dd90ec;
+}
+
+/* Item de Comentário (Prévia) */
+.comentario-item {
+    background-color: white;
+    padding: 15px 0; /* Padding vertical para separar */
+    border-bottom: 1px solid #eee; /* Linha de separação */
+    font-size: 16px;
+}
+/* O primeiro item pode ter uma borda superior para delimitar a seção */
+.preview-comentarios .comentario-item:first-child {
+    border-top: 1px solid #eee; 
+}
+
+
+.autor-comentario {
+    color: #7a007e;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.texto-comentario {
+    margin-bottom: 5px;
+    color: #333;
+    padding-left: 10px; /* Pequeno recuo para o texto */
+}
+
+.data-comentario {
+    font-size: 12px;
+    color: #999;
+    display: block;
+    text-align: left; /* Alinhamento à esquerda */
+    padding-left: 10px;
+    margin-top: 5px;
+}
