@@ -26,8 +26,10 @@ public class LoginController {
     @Autowired
     private UsuarioService uservice;
 
+
     @GetMapping("/login")
     public String login(Model model) {
+
         Usuario usuario = new Usuario();
         model.addAttribute("usuario", usuario);
         return "login";

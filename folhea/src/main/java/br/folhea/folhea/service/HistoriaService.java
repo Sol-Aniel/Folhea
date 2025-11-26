@@ -50,7 +50,7 @@ public class HistoriaService {
         historiaRepository.deleteById(id);
     }
 
-    public List<Historia> buscarPorTitulo(String titulo) {
-        return historiaRepository.findByTitulo(titulo);
+    public List<Historia> buscarPorTermo(String titulo) {
+        return historiaRepository.findByTituloContainingIgnoreCase(titulo);
     }
 }

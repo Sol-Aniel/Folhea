@@ -72,23 +72,5 @@ public class UsuarioController {
 //        return "redirect:/usuarios/login";
 //    }
 
-    @GetMapping("/perfil")
-    public String perfil(Model model, HttpServletRequest request) {
 
-        try {
-            String idStr = CookieService.getCookie(request, "usuarioId");
-
-            if (idStr == null) {
-                return "redirect:/login";
-            }
-            Long id = Long.valueOf(idStr);
-            Usuario usuario = usuarioRepository.findById(id)
-                    .orElseThrow(() -> new RuntimeException("Usuário não encontrado."));
-            model.addAttribute("usuario", usuario);
-            return "perfil";
-
-        } catch (Exception e) {
-            return "redirect:/login";
-        }
-    }
 }

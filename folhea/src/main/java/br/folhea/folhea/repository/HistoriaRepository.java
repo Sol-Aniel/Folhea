@@ -10,6 +10,6 @@ import java.util.Optional;
 public interface HistoriaRepository extends JpaRepository<Historia, Long> {
 
     List<Historia> findByTitulo(String titulo);
-
+    List<Historia> findByTituloContainingIgnoreCase(String termoBusca);
     List<Historia> findAllByUsuario(Usuario usuario);
 }

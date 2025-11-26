@@ -1,6 +1,7 @@
 package br.folhea.folhea.controller;
 
 import br.folhea.folhea.model.Historia;
+import br.folhea.folhea.model.StatusHistoria;
 import br.folhea.folhea.model.Usuario;
 import br.folhea.folhea.service.CookieService;
 import br.folhea.folhea.service.HistoriaService;
@@ -11,6 +12,8 @@ import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @Controller
 @RequestMapping("/historias")
@@ -41,7 +44,7 @@ public class HistoriaController {
         model.addAttribute("listas", historiaService.listarHistorias()); // <-- Mude o nome da variável
         model.addAttribute("usuarioLogado", getUsuarioLogado(request));
 
-        return "listasLeitura";
+        return "biblioteca";
     }
 
     @GetMapping("/{id}")
@@ -76,21 +79,23 @@ public class HistoriaController {
             @RequestParam String titulo,
             @RequestParam String sinopse,
             @RequestParam String tag,
-            @RequestParam String texto,
+            @RequestParam String conteudoCapitulo,
             HttpServletRequest request,
             Model model
     ) {
         Usuario logado = getUsuarioLogado(request);
-       // if (logado == null)
-         //   return "redirect:/login";
+        //if (logado == null)
+        //  return "redirect:/login";
 
         try {
             Historia h = new Historia();
             h.setTitulo(titulo);
-            h.setTextContent(texto);
+            h.setTag(tag);
+            h.setTextContent(conteudoCapitulo);
             h.setUsuario(logado);
             h.setSinopse(sinopse);
             h.setTag(tag);
+            h.setStatus(StatusHistoria.ANDAMENTO);
 
 
 
@@ -130,7 +135,7 @@ public class HistoriaController {
     public String atualizar(
             @PathVariable Long id,
             @RequestParam String titulo,
-            @RequestParam String texto,
+            @RequestParam String conteudoCapitulo,
             HttpServletRequest request) {
 
         Usuario logado = getUsuarioLogado(request);
@@ -144,7 +149,7 @@ public class HistoriaController {
 
         Historia nova = new Historia();
         nova.setTitulo(titulo);
-        nova.setTextContent(texto);
+        nova.setTextContent(conteudoCapitulo);
         nova.setUsuario(logado);
 
         historiaService.atualizarHistoria(id, nova);
@@ -169,5 +174,29 @@ public class HistoriaController {
         historiaService.deletarHistoria(id);
 
         return "redirect:/historias?sucesso=História deletada";
+    }
+
+    // Este método GET é que irá efetivamente processar a URL final
+    @GetMapping("/biblioteca")
+    public String listarHistoriasPorBusca(
+            @RequestParam(value = "busca", required = false) String termoBusca,
+            Model model,
+            HttpServletRequest request) {
+
+        // Lógica para filtrar histórias baseada no termoBusca
+        if (termoBusca != null && !termoBusca.isEmpty()) {
+           List listaHistorias =  historiaService.buscarPorTermo(termoBusca);
+
+
+            model.addAttribute("listas", listaHistorias); // Substitua com sua busca real
+        } else {
+            model.addAttribute("listas", historiaService.listarHistorias());
+        }
+
+        model.addAttribute("usuarioLogado", getUsuarioLogado(request));
+
+        // Supondo que a página de biblioteca se chame "biblioteca"
+        return "biblioteca";
+
     }
 }

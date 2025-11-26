@@ -12,7 +12,6 @@ public class PostService {
 
     private final PostRepository postRepository;
 
-    // 🔹 Injeção do repository (necessário para funcionar)
     public PostService(PostRepository postRepository) {
         this.postRepository = postRepository;
     }

@@ -17,7 +17,6 @@ import java.util.Date;
 public class Historia  {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @SequenceGenerator(schema = "folhea", name = "historia_sq", sequenceName ="historia_sq", initialValue = 1) // valores em sequencia
     private Long id;
 
     @Column(name="status")
