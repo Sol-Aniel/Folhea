@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escrever Capítulo - Título do Livro</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/escrever.css}">
+
+   <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- PAINEL LATERAL DE GERENCIAMENTO -->
+    <div class="painel-lateral">
+        <h2>O Segredo da Floresta Proibida</h2>
+        <p>Capítulo Atual: O Início da Profecia</p>
+
+        <div class="acoes-escrita">
+            <a th:href="@{/rascunhoSalvo.html}"><button class="btn-salvar">Salvar Rascunho</button></a>
+            <a th:href="@{/publicarCap.html}"><button class="btn-publicar">Publicar Capítulo</button></a>
+            <button class="btn-sair" onclick="window.location.href='home.html'">
+                Sair do Editor
+            </button>
+        </div>
+
+        <div class="metadados-capitulo">
+            <label for="titulo-capitulo">Título do Capítulo</label>
+            <input type="text" id="titulo-capitulo" value="O Início da Profecia">
+            
+            <label for="nota-autor">Nota do Autor (início)</label>
+            <input type="text" id="nota-autor" placeholder="Diga olá aos seus leitores!">
+
+            <label for="nota-final">Nota do Autor (final)</label>
+            <input type="text" id="nota-final" placeholder="Agradeça e peça um voto!">
+        </div>
+    </div>
+
+    <!-- ÁREA PRINCIPAL DE EDIÇÃO -->
+    <div class="area-edicao">
+        <h1>Editor de Capítulo</h1>
+        
+        <div class="editor-container">
+            <div class="toolbar">
+                <button onclick="formatText('bold')">B</button>
+                <button onclick="formatText('italic')">I</button>
+                <button onclick="formatText('underline')">U</button>
+                <button onclick="formatText('insertOrderedList')">1.</button>
+                <button onclick="formatText('insertUnorderedList')">•</button>
+            </div>
+            
+            <!-- contenteditable é usado para criar um editor de rich text -->
+            <div id="editor-texto" contenteditable="true">
+                <p><strong>Comece a escrever seu capítulo aqui!</strong></p>
+                <p>O cheiro de terra molhada e orvalho da manhã pairava sobre o vilarejo de Eldoria...</p>
+            </div>
+
+            <div class="contador-palavras">
+                Palavras: <span id="word-count">8</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const editor = document.getElementById('editor-texto');
+        const wordCountDisplay = document.getElementById('word-count');
+
+        // Função para formatar o texto selecionado
+        function formatText(command) {
+            document.execCommand(command, false, null);
+            editor.focus();
+        }
+
+        // Função para contar palavras
+        function updateWordCount() {
+            const text = editor.innerText.trim();
+            if (text === '') {
+                wordCountDisplay.textContent = 0;
+                return;
+            }
+            // Usa regex para contar palavras (espaços e quebras de linha como separadores)
+            const words = text.match(/\b\w+\b/g);
+            wordCountDisplay.textContent = words ? words.length : 0;
+        }
+
+        // Adiciona o listener para atualizar a contagem de palavras ao digitar
+        editor.addEventListener('input', updateWordCount);
+
+        // Atualiza a contagem inicial
+        updateWordCount();
+    </script>
+</body>
+
+</html>

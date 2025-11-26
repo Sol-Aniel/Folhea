@@ -51,6 +51,11 @@ public class CommentService {
         }
     }
 
+    public Comment buscarComentario(Long id) {
+        return commentRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Comentário não encontrado com id: " + id));
+    }
+
     public void atualizarComentario(Long id, Comment novoComentario){
 
         if (novoComentario.getComment().trim().isEmpty()){

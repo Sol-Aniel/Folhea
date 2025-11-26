@@ -1,0 +1,108 @@
+        /* CSS BÁSICO CONSISTENTE */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        header {
+            background-color: #E9D0EE;
+            height: 50px;
+        }
+        
+        main {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        h1 {
+            color: #4b005a;
+            font-size: 32px;
+            margin-bottom: 30px;
+            border-bottom: 3px solid #dd90ec;
+            padding-bottom: 10px;
+        }
+
+        .formulario-lista {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Estilos do Formulário */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #4b005a;
+        }
+
+        .form-group input[type="text"],
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .form-group textarea {
+            min-height: 80px;
+            resize: vertical;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: #dd90ec;
+            outline: none;
+        }
+
+        /* Opções (Privacidade) */
+        .opcoes-lista {
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+        }
+
+        .opcoes-lista input[type="radio"] {
+            margin-right: 8px;
+        }
+
+        .opcoes-lista label {
+            font-weight: normal;
+            margin-right: 15px;
+            color: #555;
+            display: inline-flex;
+            align-items: center;
+            cursor: pointer;
+        }
+        
+        /* Botão Criar */
+        .btn-criar {
+            background-color: #dd90ec;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+            float: right;
+            margin-top: 20px;
+        }
+
+        .btn-criar:hover {
+            background-color: #ca49e4;
+        }

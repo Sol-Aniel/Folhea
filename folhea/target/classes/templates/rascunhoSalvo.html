@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rascunho Salvo</title>
+    
+    <link rel="stylesheet" type="text/css" th:href="@{/css/rascunhoSalvo.css}">
+</head>
+
+<body>
+    <header>
+                <img th:src="@{/img/logoMenor.png}" alt="Logo" class="logo">
+    </header>
+
+    <main>
+        <div class="confirmacao-box">
+            <svg xmlns="http://www.w3.org/2000/svg" height="80px" viewBox="0 -960 960 960" width="80px" fill="currentColor">
+                <path d="M382-240 154-468l57-57 171 171 368-368 57 57-425 425Z"/>
+            </svg>
+            <h1>Rascunho Salvo!</h1>
+                        <p th:text="'Suas alterações em &quot;' + ${rascunho.tituloHistoria} + '&quot; foram salvas com sucesso no rascunho.'">
+                Suas alterações em "O Início da Profecia" foram salvas com sucesso no rascunho.
+            </p>
+                        <a th:href="@{/escrever/{id}(id=${rascunho.id})}" class="btn">Voltar à Escrita</a>
+        </div>
+    </main>
+
+    </body>
+
+</html>

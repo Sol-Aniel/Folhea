@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seguidores</title>
+    
+    <link rel="stylesheet" type="text/css" th:href="@{/css/seguidore.css}">
+</head>
+
+<body>
+    <header>
+            </header>
+
+    <main>
+                <h1 th:text="'Seguidores (' + ${totalSeguidores} + ')'">Seguidores (542)</h1>
+
+        <div class="lista-seguidores">
+            
+                        <div class="usuario-item" th:each="usuario : ${seguidores}">
+                <div class="usuario-info">
+                    <a th:href="@{/perfil/{id}(id=${usuario.id})}">
+                                                <img th:src="@{${usuario.urlFoto ?: '/img/avatar-padrao.png'}}" 
+                             th:alt="${'Foto de perfil de ' + usuario.username}" 
+                             class="foto-usuario">
+                    </a>
+                                        <a th:href="@{/perfil/{id}(id=${usuario.id})}" th:text="${usuario.username}" class="nome-usuario">NomeDoUsuario</a>
+                </div>
+                
+                <button th:if="${!usuario.estaSeguindo}"
+                        th:attr="data-user-id=${usuario.id}"
+                        th:data-action="follow"
+                        class="btn-seguir">
+                    Seguir
+                </button>
+                
+                <button th:if="${usuario.estaSeguindo}"
+                        th:attr="data-user-id=${usuario.id}"
+                        th:data-action="unfollow"
+                        class="btn-seguir seguindo">
+                    Seguindo
+                </button>
+            </div>
+
+            <div th:if="${seguidores.isEmpty()}">
+                <p>Ninguém está te seguindo ainda. Comece a interagir!</p>
+            </div>
+            
+        </div>
+    </main>
+</body>
+</html>

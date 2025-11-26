@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org"> 
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title th:text="'Lendo: ' + ${historia.titulo} + ' - Cap. ' + ${capitulo.numero}"></title>
+    
+    <link rel="stylesheet" type="text/css" th:href="@{/css/leitura.css}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="leitura-header">
+                <h1 th:text="${historia.titulo}">O Segredo da Floresta Proibida</h1>
+                <a th:href="@{/historia_detalhe/{id}(id=${historia.id})}" class="close-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor">
+                <path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/>
+            </svg>
+        </a>
+    </div>
+
+    <main>
+        <div class="capitulo-titulo">
+                        <h2 th:text="'Capítulo ' + ${capitulo.numero}">Capítulo 1</h2>
+                        <h3 th:text="${capitulo.titulo}">O Início da Profecia</h3>
+        </div>
+
+        <div class="texto-capitulo">
+                        <div th:utext="${capitulo.conteudo}">
+                                <p>O cheiro de terra molhada e orvalho da manhã pairava sobre o vilarejo de Eldoria...</p>
+                <p>...</p>
+            </div>
+        </div>
+        
+        <div class="texto-capitulo">
+            <p style="text-align: center; font-style: italic; color: #7a007e; margin-top: 40px;">Obrigada por ler! Deixe seu voto e comentário para o Capítulo 2!</p>
+        </div>
+
+       <div class="nav-capitulos">
+                        <a th:href="${capitulo.numero > 1 ? @{/leitura/{id}(id=${capituloAnterior.id})} : '#'}" 
+                th:class="${capitulo.numero == 1 ? 'btn-anterior disabled' : 'btn-anterior'}">
+                <svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960" width="18px" fill="currentColor">
+                    <path d="M560-240 320-480l240-240 56 56-184 184 184 184-56 56Z" />
+                </svg>
+                Anterior
+            </a>
+                        <a th:if="${proximoCapitulo != null}" th:href="@{/leitura/{id}(id=${proximoCapitulo.id})}" class="btn-proximo">
+                Próximo Capítulo
+                <svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960" width="18px" fill="currentColor">
+                    <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                </svg>
+            </a>
+            <span th:if="${proximoCapitulo == null}" class="btn-proximo disabled">Fim da História</span>
+        </div>
+
+        <div class="secao-comentarios">
+                        <h3>Comentar no Capítulo</h3>
+            <form class="form-comentario" th:action="@{/capitulo/comentar}" method="POST">
+                <input type="hidden" name="capituloId" th:value="${capitulo.id}"> 
+                <textarea placeholder="Deixe seu comentário sobre este capítulo..." name="textoComentario" required></textarea>
+                <button type="submit">Enviar Comentário</button>
+            </form>
+            
+                        <div class="link-todos-comentarios">
+                <a th:href="@{/comentarios/{id}(id=${capitulo.id})}" th:text="'Ver todos os ' + ${capitulo.totalComentarios} + ' comentários deste capítulo &raquo;'">
+                    Ver todos os 42 comentários deste capítulo &raquo;
+                </a>
+            </div>
+
+                        <div class="preview-comentarios">
+                <div class="comentario-item" th:each="comentario : ${previewsComentarios}">
+                    <p class="autor-comentario" th:text="'**' + ${comentario.autor} + '**'">**LeitorFã123**</p>
+                    <p class="texto-comentario" th:text="${comentario.texto}">Que plot twist incrível! Não esperava que Kael fosse aparecer assim! Estou viciada!</p>
+                    <span class="data-comentario" th:text="${comentario.data}">há 2 horas</span>
+                </div>
+                
+                <p th:if="${previewsComentarios.isEmpty()}" style="text-align: center; color: gray;">Seja o primeiro a comentar!</p>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
