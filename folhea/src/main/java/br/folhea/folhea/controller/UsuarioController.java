@@ -77,16 +77,16 @@ public class UsuarioController {
             String idStr = CookieService.getCookie(request, "usuarioId");
 
             if (idStr == null) {
-                return "redirect:/usuarios/login";
+                return "redirect:/login";
             }
             Long id = Long.valueOf(idStr);
             Usuario usuario = usuarioService.findById(id)
                     .orElseThrow(() -> new RuntimeException("Usuário não encontrado."));
             model.addAttribute("usuario", usuario);
-            return "usuarios/perfil";
+            return "perfil";
 
         } catch (Exception e) {
-            return "redirect:/usuarios/login";
+            return "redirect:/login";
         }
     }
 }

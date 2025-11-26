@@ -17,7 +17,7 @@ import java.util.Date;
 public class Comment {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "comentarios_sq")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @SequenceGenerator(schema = "folhea", name = "comentarios_sq", sequenceName ="comentarios_sq", initialValue = 1) // valores em sequencia
     private Long id;
 

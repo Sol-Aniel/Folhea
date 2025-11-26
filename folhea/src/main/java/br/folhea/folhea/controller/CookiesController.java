@@ -35,7 +35,7 @@ public class CookiesController {
             model.addAttribute("erro", "Erro ao codificar cookie.");
         }
 
-        return "cookies/index";
+        return "index";
     }
 
     @GetMapping("/ler")
@@ -57,7 +57,7 @@ public class CookiesController {
             model.addAttribute("erro", "Erro ao ler cookie.");
         }
 
-        return "cookies/index";
+        return "index";
     }
 
     @GetMapping("/delete")
@@ -74,6 +74,6 @@ public class CookiesController {
             model.addAttribute("erro", "Erro ao deletar cookie.");
         }
 
-        return "cookies/index";
+        return "index";
     }
 }

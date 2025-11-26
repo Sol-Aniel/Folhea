@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Seguidores {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seguidores_sq")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @SequenceGenerator(schema = "folhea", name = "seguidores_sq", sequenceName ="seguidores_sq", initialValue = 1) // valores em sequencia
     private Long id;
 

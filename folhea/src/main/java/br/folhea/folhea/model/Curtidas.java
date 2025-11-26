@@ -16,7 +16,7 @@ import java.util.Date;
 public class Curtidas {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "curtida_sq")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @SequenceGenerator(schema = "folhea", name = "curtida_sq", sequenceName ="curtida_sq", initialValue = 1) // valores em sequencia
     private Long id;
 

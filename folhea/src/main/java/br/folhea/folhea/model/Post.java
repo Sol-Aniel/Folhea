@@ -16,7 +16,7 @@ import java.util.Date;
 @NoArgsConstructor
 public class Post {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "post_sq")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @SequenceGenerator(schema = "folhea", name = "post_sq", sequenceName ="post_sq", initialValue = 1) // valores em sequencia
     private Long id;
 

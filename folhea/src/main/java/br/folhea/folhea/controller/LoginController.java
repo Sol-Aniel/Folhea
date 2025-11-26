@@ -23,7 +23,7 @@ public class LoginController {
     @Autowired
     private UsuarioService usuarioService;
 
-    @GetMapping("login")
+    @GetMapping("/login")
     public String login(Model model) {
         model.addAttribute("usuario", new Usuario());
         return "login";
@@ -43,7 +43,7 @@ public class LoginController {
         return "index";
     }
 
-    @PostMapping("logar")
+    @PostMapping("/logar")
     public String logar(
             @Valid @ModelAttribute("usuario") Usuario usuario,
             BindingResult result,

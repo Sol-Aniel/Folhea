@@ -17,6 +17,7 @@ public class CommentController {
 
     private final CommentService commentService;
     private final UsuarioRepository usuarioRepository;
+    private static final String COOKIE_USUARIO_ID = "usuarioId";
 
     public CommentController(CommentService commentService, UsuarioRepository usuarioRepository) {
         this.commentService = commentService;
@@ -26,15 +27,26 @@ public class CommentController {
     // Utilitário de segurança (pegar usuário logado via cookie)
     private Usuario getUsuarioLogado(HttpServletRequest request) {
         try {
-            String idStr = CookieService.getCookie(request, "id_usuario");
+            String idStr = CookieService.getCookie(request, COOKIE_USUARIO_ID);
             if (idStr == null) return null;
-
             return usuarioRepository.findById(Long.parseLong(idStr)).orElse(null);
-
         } catch (Exception e) {
             return null;
         }
     }
+
+    @PostMapping("/novo")
+    public String salvarComentario(@RequestParam String comentario, @RequestParam Long idHistoria, HttpServletRequest request) {
+        Usuario logado = getUsuarioLogado(request);
+        if (logado == null) return "redirect:/login";
+        try {
+            commentService.SalvarnovoComentario(comentario, logado.getId(), idHistoria);
+        } catch (RuntimeException e) {
+            return "redirect:/comentarios/historia/" + idHistoria + "?erro=" + e.getMessage();
+        }
+        return "redirect:/comentarios/historia/" + idHistoria;
+    }
+
 
     @GetMapping("/historia/{idHistoria}")
     public String listarPorHistoria(
@@ -49,28 +61,7 @@ public class CommentController {
         model.addAttribute("idHistoria", idHistoria);
         model.addAttribute("comentarios", commentService.mostrarComentariosHistoria(idHistoria));
 
-        return "comentarios/lista"; // templates/comentarios/lista.html
-    }
-
-    @PostMapping("/novo")
-    public String salvarComentario(
-            @RequestParam String comentario,
-            @RequestParam Long idHistoria,
-            HttpServletRequest request
-    ) {
-
-        Usuario logado = getUsuarioLogado(request);
-        if (logado == null) {
-            return "redirect:/login";
-        }
-
-        try {
-            commentService.SalvarnovoComentario(comentario, logado.getId(), idHistoria);
-        } catch (RuntimeException e) {
-            return "redirect:/comentarios/historia/" + idHistoria + "?erro=" + e.getMessage();
-        }
-
-        return "redirect:/comentarios/historia/" + idHistoria;
+        return "comentarios"; // templates/comentarios/lista.html
     }
 
     @GetMapping("/editar/{id}")

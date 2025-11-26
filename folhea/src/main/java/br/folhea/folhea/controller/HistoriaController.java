@@ -42,7 +42,7 @@ public class HistoriaController {
         model.addAttribute("historias", historiaService.listarHistorias());
         model.addAttribute("usuarioLogado", getUsuarioLogado(request));
 
-        return "historias/lista"; // templates/historias/lista.html
+        return "listasLeitura"; // templates/historias/lista.html
     }
 
     @GetMapping("/{id}")
@@ -57,7 +57,7 @@ public class HistoriaController {
         model.addAttribute("historia", historia);
         model.addAttribute("usuarioLogado", getUsuarioLogado(request));
 
-        return "historias/detalhes"; // templates/historias/detalhes.html
+        return "detalhes"; // templates/historias/detalhes.html
     }
 
     @GetMapping("/nova")
@@ -69,7 +69,7 @@ public class HistoriaController {
 
         model.addAttribute("historia", new Historia());
         model.addAttribute("usuarioLogado", logado);
-        return "historias/form"; // templates/historias/form.html
+        return "criar"; // templates/historias/form.html
     }
 
     @PostMapping("/nova")
