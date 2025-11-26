@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página Inicial</title>
+  <link rel="stylesheet" th:href="@{/css/index.css}">
+
+  <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+  <header>
+    <img th:src="@{/images/logoMenor.png}" alt="Logo">
+    Olá, <span th:text="${nome}"></span>
+    <form class="search-bar" action="#" method="GET">
+      <input type="text" name="busca" placeholder="Pesquisar...">
+      <button type="submit"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+          fill="#1f1f1f">
+          <path
+            d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z" />
+        </svg></button>
+    </form>
+    <nav>
+      <a th:href="@{/}">Início</a>
+      <a th:href="@{/login}">Login</a>
+      <a th:href="@{/cadastroUsuario}">Cadastro</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <div class="comentariosUser">
+      <h1>O que nossos usuários comentam:</h1>
+      <div class="imgComent">
+        <img th:src="@{/images/2.png}" alt="Imagem 2">
+        <img th:src="@{/images/1.png}" alt="Imagem 1">
+        <img th:src="@{/images/3.png}" alt="Imagem 3">
+      </div>
+    </div>
+    <div class="emAlta">
+      <h1>Histórias em Alta</h1>
+      <div class="livros-container">
+        <div class="galeria">
+          <div class="galeria">
+            <img th:each="i : ${#numbers.sequence(1,10)}"
+                 th:src="@{'/images/livro' + ${i} + '.jpeg'}"
+                 th:alt="'Imagem ' + ${i}">
+          </div>
+        </div>
+        <div class="imagem-lateral">
+          <img th:src="@{/images/lendoo.png}" alt="Destaque">
+        </div>
+      </div>
+
+    </div>
+    <div class="romance">
+      <img th:src="@{/images/8.png}" alt="kiss">
+      <div class="generos">
+        <h2>Todos os gêneros em um só lugar!!</h2>
+        <p>Aqui você encontra romance, terror, fantasia e muito mais.</p>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    &copy; 2025 Folhea - Todos os direitos reservados
+  </footer>
+</body>
+
+</html>
