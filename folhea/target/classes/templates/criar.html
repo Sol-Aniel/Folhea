@@ -1,124 +1,124 @@
 <!DOCTYPE html>
 <html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Criar Nova História</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar Nova História</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" type="text/css" th:href="@{/css/criar.css}">
-        <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
 </head>
 
-<body>
-    <header>
-                <img th:src="@{/img/logoMenor.png}" alt="Logo">
-        <form class="search-bar" action="#" method="GET">
-            <input type="text" name="busca" placeholder="Pesquisar...">
-            <button type="submit"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
-                    width="24px" fill="#1f1f1f">
-                    <path
-                        d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z" />
-                </svg></button>
-        </form>
+<body class="bg-gray-50">
+    <header class="flex justify-between items-center p-4 bg-white shadow-md">
+        <img th:src="@{/img/logoMenor.png}" alt="Logo">
+        <form class="search-bar flex items-center border border-gray-300 rounded-full overflow-hidden">
+            <input type="text" name="busca" placeholder="Pesquisar..." class="border-none px-4 py-2 outline-none">
+            <button type="submit" class="bg-white border-none p-2 cursor-pointer">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f">
+                    <path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z" />
+                </svg>
+            </button>
+        </form>
 
-        <nav>
-                        <a th:href="@{/home.html}"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
-                    width="24px" fill="#1f1f1f">
-                    <path
-                        d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z" />
-                </svg></a>
-            <a th:href="@{/biblioteca.html}"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
-                    width="24px" fill="#1f1f1f">
-                    <path
-                        d="M240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h480q33 0 56.5 23.5T800-800v640q0 33-23.5 56.5T720-80H240Zm0-80h480v-640h-80v280l-100-60-100 60v-280H240v640Zm0 0v-640 640Zm200-360 100-60 100 60-100-60-100 60Z" />
-                </svg></a>
-            <a th:href="@{/criar_historia.html}"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
-                    width="24px" fill="#1f1f1f">
-                    <path
-                        d="M200-200h57l391-391-57-57-391 391v57Zm-80 80v-170l528-527q12-11 26.5-17t30.5-6q16 0 31 6t26 18l55 56q12 11 17.5 26t5.5 30q0 16-5.5 30.5T817-647L290-120H120Zm640-584-56-56 56 56Zm-141 85-28-29 57 57-29-28Z" />
-                </svg></a>
-            <a th:href="@{/notifications.html}"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
-                    width="24px" fill="#1f1f1f">
-                    <path
-                        d="M160-200v-80h80v-280q0-83 50-147.5T420-792v-28q0-25 17.5-42.5T480-880q25 0 42.5 17.5T540-820v28q80 20 130 84.5T720-560v280h80v80H160Zm320-300Zm0 420q-33 0-56.5-23.5T400-160h160q0 33-23.5 56.5T480-80ZM320-280h320v-280q0-66-47-113t-113-47q-66 0-113 47t-47 113v280Z" />
-                </svg></a>
-            <a th:href="@{/perfil.html}"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
-                    width="24px" fill="#1f1f1f">
-                    <path
-                        d="M234-276q51-39 114-61.5T480-360q69 0 132 22.5T726-276q35-41 54.5-93T800-480q0-133-93.5-226.5T480-800q-133 0-226.5 93.5T160-480q0 59 19.5 111t54.5 93Zm246-164q-59 0-99.5-40.5T340-580q0-59 40.5-99.5T480-720q59 0 99.5 40.5T620-580q0 59-40.5 99.5T480-440Zm0 360q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q53 0 100-15.5t86-44.5q-39-29-86-44.5T480-280q-53 0-100 15.5T294-220q39 29 86 44.5T480-160Zm0-360q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43q0 26 17 43t43 17Zm0-60Zm0 360Z" />
-                </svg></a>
-        </nav>
-    </header>
+        <nav class="flex space-x-4">
+            <a th:href="@{/home.html}"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z" /></svg></a>
+            <a th:href="@{/biblioteca.html}"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h480q33 0 56.5 23.5T800-800v640q0 33-23.5 56.5T720-80H240Zm0-80h480v-640h-80v280l-100-60-100 60v-280H240v640Zm0 0v-640 640Zm200-360 100-60 100 60-100-60-100 60Z" /></svg></a>
+            </nav>
+    </header>
 
-    <main>
-        <h1>Detalhes da História</h1>
-                <form th:action="@{/salvar_historia}" method="POST"> 
-            <div class="container-historia">
-                <div class="secao-capa">
-                    <h2>Capa</h2>
-                    <div class="capa-preview">
-                        <span>Recomendado: 512x800px</span>
-                    </div>
-                    <label for="capa" class="btn-upload">
-                        Fazer upload
-                    </label>
-                    <input type="file" id="capa" accept="image/*">
-                </div>
+    <main class="p-4 md:p-8">
+        <h1 class="text-3xl font-bold text-gray-800 mb-6">Criar Nova História</h1>
 
-                <div class="secao-informacoes">
-                    <div class="form-grupo">
-                        <label for="titulo">Título da História</label>
-                        <input type="text" id="titulo" placeholder="O título perfeito para sua obra!" required>
-                    </div>
+        <form th:action="@{/historias/nova}" method="POST" class="story-form-container max-w-4xl mx-auto bg-white p-6 rounded-lg shadow-xl">
 
-                    <div class="form-grupo">
-                        <label for="sinopse">Sinopse (Descrição)</label>
-                        <textarea id="sinopse" placeholder="Descreva sua história em até 2000 caracteres..."
-                            required></textarea>
-                    </div>
+            <div class="container-historia grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
 
-                    <div class="form-grupo">
-                        <label for="genero">Gênero Principal</label>
-                        <select id="genero" required>
-                            <option value="">Selecione...</option>
-                            <option value="romance">Romance</option>
-                            <option value="fantasia">Fantasia</option>
-                            <option value="ficcao">Ficção Científica</option>
-                            <option value="terror">Terror</option>
-                            <option value="suspense">Suspense</option>
-                        </select>
-                    </div>
+                <div class="secao-capa flex flex-col items-center col-span-1 border-r border-gray-100 pr-6">
+                    <h2 class="text-xl font-semibold mb-3 text-gray-700">Capa</h2>
+                    <div class="capa-preview w-40 h-64 bg-gray-100 border-2 border-dashed border-gray-300 rounded-lg flex items-center justify-center text-center text-gray-500 text-sm overflow-hidden mb-4">
+                        <span>Recomendado: 512x800px</span>
+                    </div>
+                    <label for="capa" class="cursor-pointer px-4 py-2 bg-purple-100 text-purple-600 font-medium rounded-lg hover:bg-purple-200 transition duration-150">
+                        Fazer upload
+                    </label>
+                    <input type="file" id="capa" name="capa" accept="image/*" class="hidden">
+                </div>
 
-                    <div class="form-grupo">
-                        <label for="tags">Tags (separadas por vírgula)</label>
-                        <input type="text" id="tags" placeholder="#magia, #vampiros, #escolar, #lgbtq">
-                    </div>
-                </div>
-            </div>
+                <div class="secao-informacoes flex flex-col gap-4 col-span-2">
+                    <h2 class="text-xl font-semibold mb-3 text-gray-700">Informações Básicas</h2>
 
-            <div class="form-actions">
-                                <button type="submit"> Salvar e Iniciar Escrita</button>
-            </div>
-        </form>
-    </main>
+                    <div class="form-grupo">
+                        <label for="titulo" class="block text-sm font-medium text-gray-700">Título da História</label>
+                        <input type="text" name="titulo" id="titulo" placeholder="O título perfeito para sua obra!" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-purple-500 focus:ring-purple-500 p-2 border">
+                    </div>
 
-    <footer>
-        &copy; 2025 Folhea - Todos os direitos reservados
-    </footer>
+                    <div class="form-grupo">
+                        <label for="sinopse" class="block text-sm font-medium text-gray-700">Sinopse (Descrição)</label>
+                        <textarea id="sinopse" name="sinopse" placeholder="Descreva sua história em até 2000 caracteres..." required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-purple-500 focus:ring-purple-500 h-32 p-2 border resize-none"></textarea>
+                    </div>
 
-    <script>
-        // Pequeno script para pré-visualizar a imagem da capa (opcional, mas útil)
-        document.getElementById('capa').addEventListener('change', function(event) {
-            const file = event.target.files[0];
-            if (file) {
-                const reader = new FileReader();
-                reader.onload = function(e) {
-                    const preview = document.querySelector('.capa-preview');
-                    preview.innerHTML = `<img src="${e.target.result}" alt="Pré-visualização da Capa">`;
-                };
-                reader.readAsDataURL(file);
-            }
-        });
-    </script>
+                    <div class="form-grupo">
+                        <label for="genero" class="block text-sm font-medium text-gray-700">Gênero Principal</label>
+                        <select id="genero" name="genero" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-purple-500 focus:ring-purple-500 p-2 border bg-white">
+                            <option value="">Selecione...</option>
+                            <option value="romance">Romance</option>
+                            <option value="fantasia">Fantasia</option>
+                            <option value="ficcao">Ficção Científica</option>
+                            <option value="terror">Terror</option>
+                            <option value="suspense">Suspense</option>
+                        </select>
+                    </div>
+
+                    <div class="form-grupo">
+                        <label for="tag" class="block text-sm font-medium text-gray-700">Tags (separadas por vírgula)</label>
+                        <input type="text" id="tag" name="tag" placeholder="#magia, #vampiros, #escolar, #lgbtq" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-purple-500 focus:ring-purple-500 p-2 border">
+                    </div>
+                </div>
+            </div>
+
+            <div class="secao-capitulo bg-purple-50 p-6 border border-purple-200 rounded-lg mb-8">
+                <h2 class="text-2xl font-bold text-gray-800 mb-5">Escreva o Primeiro Capítulo</h2>
+
+                <div class="form-grupo mb-4">
+                    <label for="tituloCapitulo" class="block text-sm font-medium text-gray-700">Título do Capítulo (Opcional)</label>
+                    <input type="text" name="tituloCapitulo" id="tituloCapitulo" placeholder="Ex: O Despertar da Brisa" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-purple-500 focus:ring-purple-500 p-2 border">
+                </div>
+
+                <div class="form-grupo">
+                    <label for="conteudoCapitulo" class="block text-sm font-medium text-gray-700">Conteúdo do Capítulo</label>
+                    <textarea id="conteudoCapitulo" name="conteudoCapitulo" placeholder="Comece a escrever a sua história aqui! Use sua imaginação e crie um mundo incrível." required class="mt-1 block w-full rounded-md border-gray-300 shadow-lg focus:border-purple-600 focus:ring-purple-600 h-64 p-3 border resize-y"></textarea>
+                </div>
+            </div>
+
+            <div class="form-actions flex justify-end mt-6">
+                <button type="submit" class="px-8 py-3 bg-purple-600 text-white font-bold rounded-full text-lg shadow-lg hover:bg-purple-700 transition duration-300 transform hover:scale-105">
+                    Salvar História e Publicar Capítulo
+                </button>
+            </div>
+        </form>
+    </main>
+
+    <footer class="text-center p-4 bg-white text-gray-500 border-t border-gray-200">
+        &copy; 2025 Folhea - Todos os direitos reservados
+    </footer>
+
+    <script>
+        // Pequeno script para pré-visualizar a imagem da capa
+        document.getElementById('capa').addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const preview = document.querySelector('.capa-preview');
+                    // CORREÇÃO: Usando a sintaxe correta para string no innerHTML
+                    preview.innerHTML = `<img src="${e.target.result}" alt="Pré-visualização da Capa" class="w-full h-full object-cover">`;
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
 </body>
 
 </html>

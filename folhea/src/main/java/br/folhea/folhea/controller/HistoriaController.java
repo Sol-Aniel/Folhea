@@ -29,7 +29,7 @@ public class HistoriaController {
 
     private Usuario getUsuarioLogado(HttpServletRequest request) {
         try {
-            String valor = CookieService.getCookie(request, "id_usuario");
+            String valor = CookieService.getCookie(request, "UsuarioId");
             if (valor == null) return null;
 
             return usuarioRepository.findById(Long.parseLong(valor)).orElse(null);
@@ -95,6 +95,12 @@ public class HistoriaController {
             h.setUsuario(logado);
             h.setSinopse(sinopse);
             h.setTag(tag);
+            System.out.println("titulo: '" + titulo + "'");
+            System.out.println("sinopse: '" + sinopse + "'");
+            System.out.println("tag: '" + tag + "'");
+            System.out.println("conteudo: '" + conteudoCapitulo + "'");
+            System.out.println("usuario: " + logado);
+
             h.setStatus(StatusHistoria.ANDAMENTO);
 
 
@@ -106,6 +112,7 @@ public class HistoriaController {
         } catch (Exception e) {
             model.addAttribute("erro", e.getMessage());
             model.addAttribute("usuarioLogado", logado);
+            System.out.println(e.getMessage());
             return "redirect:/historias/nova";
         }
     }

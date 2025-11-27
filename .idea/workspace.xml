@@ -5,28 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e6611edb-801d-4115-b498-c8ae24fff185" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/folhea/src/main/java/br/folhea/folhea/controller/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/src/main/java/br/folhea/folhea/controller/CommentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/folhea/src/main/java/br/folhea/folhea/controller/CookiesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/src/main/java/br/folhea/folhea/controller/CookiesController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/folhea/src/main/java/br/folhea/folhea/controller/HistoriaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/src/main/java/br/folhea/folhea/controller/HistoriaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/folhea/src/main/java/br/folhea/folhea/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/src/main/java/br/folhea/folhea/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/folhea/src/main/java/br/folhea/folhea/controller/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/src/main/java/br/folhea/folhea/controller/PostController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/folhea/src/main/java/br/folhea/folhea/controller/UsuarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/src/main/java/br/folhea/folhea/controller/UsuarioController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/folhea/src/main/java/br/folhea/folhea/model/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/src/main/java/br/folhea/folhea/model/Comment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/folhea/src/main/java/br/folhea/folhea/model/Curtidas.java" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/src/main/java/br/folhea/folhea/model/Curtidas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/folhea/src/main/java/br/folhea/folhea/model/Historia.java" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/src/main/java/br/folhea/folhea/model/Historia.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/folhea/src/main/java/br/folhea/folhea/model/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/src/main/java/br/folhea/folhea/model/Post.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/folhea/src/main/java/br/folhea/folhea/model/Seguidores.java" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/src/main/java/br/folhea/folhea/model/Seguidores.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/folhea/target/classes/br/folhea/folhea/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/target/classes/br/folhea/folhea/controller/LoginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/folhea/target/classes/br/folhea/folhea/model/Comment.class" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/target/classes/br/folhea/folhea/model/Comment.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/folhea/target/classes/br/folhea/folhea/model/Curtidas.class" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/target/classes/br/folhea/folhea/model/Curtidas.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/folhea/target/classes/br/folhea/folhea/model/Historia.class" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/target/classes/br/folhea/folhea/model/Historia.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/folhea/target/classes/br/folhea/folhea/model/Post.class" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/target/classes/br/folhea/folhea/model/Post.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/folhea/target/classes/br/folhea/folhea/model/Seguidores.class" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/target/classes/br/folhea/folhea/model/Seguidores.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/folhea/target/classes/br/folhea/folhea/model/Usuario.class" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/target/classes/br/folhea/folhea/model/Usuario.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/folhea/target/classes/br/folhea/folhea/service/CommentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/target/classes/br/folhea/folhea/service/CommentService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/folhea/target/classes/br/folhea/folhea/service/UsuarioService.class" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/target/classes/br/folhea/folhea/service/UsuarioService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,34 +34,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "SHELLCHECK.PATH": "C:\\Users\\melsc\\AppData\\Roaming\\JetBrains\\IntelliJIdea2025.2\\plugins\\Shell Script\\shellcheck.exe",
-    "Spring Boot.FolheaApplication.executor": "Run",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/melsc/Documents/GitHub/Folhea",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "project.propCompiler",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;SHELLCHECK.PATH&quot;: &quot;C:\\Users\\melsc\\AppData\\Roaming\\JetBrains\\IntelliJIdea2025.2\\plugins\\Shell Script\\shellcheck.exe&quot;,
+    &quot;Spring Boot.FolheaApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/melsc/Documents/GitHub/Folhea&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propCompiler&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\ianjo\OneDrive\IFSP\flask\Folhea\folhea\src\main\resources\templates" />
