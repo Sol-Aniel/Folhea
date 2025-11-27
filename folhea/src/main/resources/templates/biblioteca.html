@@ -52,43 +52,38 @@
     </header>
 
     <main>
+        <div th:if="${param.sucesso}" class="alerta-sucesso">
+            <p th:text="${param.sucesso[0]}"></p>
+        </div>
+
+        <div th:if="${param.erro}" class="alerta-erro">
+            <p th:text="${param.erro[0]}"></p>
+        </div>
+
         <div class="biblioteca-section">
-            <h2>Lendo Atualmente (10 Histórias)</h2>
-            <div class="galeria">
-                <div class="livro-card">
-                    <img th:src="@{/img/livro1.jpeg}" alt="Capa do Livro 1">
-                    <div class="livro-info">
-                        <h3>Título do Livro 1</h3>
-                        <p>por Nome do Autor</p>
-                    </div>
-                </div>
-                <div class="livro-card">
-                    <img th:src="@{/img/livro2.jpeg}" alt="Capa do Livro 2">
-                    <div class="livro-info">
-                        <h3>Título do Livro 2</h3>
-                        <p>por Nome do Autor</p>
-                    </div>
-                </div>
-                <div class="livro-card">
-                    <img th:src="@{/img/livro3.jpeg}" alt="Capa do Livro 3">
-                    <div class="livro-info">
-                        <h3>Título do Livro 3</h3>
-                        <p>por Nome do Autor</p>
-                    </div>
-                </div>
-                <div class="livro-card">
-                    <img th:src="@{/img/livro4.jpeg}" alt="Capa do Livro 4">
-                    <div class="livro-info">
-                        <h3>Título do Livro 4</h3>
-                        <p>por Nome do Autor</p>
-                    </div>
-                </div>
-                <div class="livro-card">
-                    <img th:src="@{/img/livro5.jpeg}" alt="Capa do Livro 5">
-                    <div class="livro-info">
-                        <h3>Título do Livro 5</h3>
-                        <p>por Nome do Autor</p>
-                    </div>
+
+            <h2 th:if="${listas != null and listas.size() > 0}">
+                <span th:text="${listas.size()}">0</span> Histórias Encontradas
+            </h2>
+
+            <div th:if="${listas == null or listas.size() == 0}">
+                <h2>Nenhuma história encontrada.</h2>
+                <p>Tente refinar sua busca ou <a th:href="@{/historias/nova}">crie uma nova história</a>!</p>
+            </div>
+
+            <div class="galeria" th:if="${listas != null and listas.size() > 0}">
+                <div class="livro-card" th:each="historia : ${listas}">
+
+                    <a th:href="@{/historias/{id}(id=${historia.id})}">
+
+                        <img th:src="@{/img/livro-padrao.png}" alt="Capa da História">
+
+                        <div class="livro-info">
+                            <h3 th:text="${historia.titulo}">Título Padrão</h3>
+
+                            <p>por <span th:text="${historia.usuario?.nome}">Autor Desconhecido</span></p>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
