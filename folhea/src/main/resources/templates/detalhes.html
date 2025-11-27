@@ -86,8 +86,13 @@
                 </div>
                 
                 <div class="actions">
-                                        <a th:href="@{/leitura.html}" class="btn-primary">Ler Primeiro Capítulo</a>
-                    <button class="btn-secundario">+ Adicionar à Biblioteca</button>
+                                        <a th:href="@{/historias/id/leitura}" class="btn-primary">Ler Primeiro Capítulo</a>
+                                                    <form th:action="@{/historias/adicionar-lista-leitura}" method="POST">
+
+                                                        <input type="hidden" name="historiaId" th:value="${historia.id}" />
+
+                                                        <button type="submit" class="btn-secundario">+ Adicionar à Lista de leitura</button>
+                                                    </form>
                 </div>
             </div>
         </div>
