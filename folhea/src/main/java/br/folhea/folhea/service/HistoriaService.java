@@ -18,6 +18,8 @@ public class HistoriaService {
     @Autowired
     private UsuarioRepository usuarioRepository;
 
+
+
     public void salvarHistoria(Historia historia){
         if (historia.getUsuario() == null || historia.getTitulo().trim().isEmpty() ||historia.getTextContent().trim().isEmpty() || historia.getSinopse() == null|| historia.getTag() == null){
             throw new IllegalArgumentException("Usuário, título e conteúdo são obrigatórios.");

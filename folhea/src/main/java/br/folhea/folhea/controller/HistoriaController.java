@@ -52,12 +52,8 @@ public class HistoriaController {
 
         Historia historia = historiaService.buscarPorId(id).orElse(null);
 
-        if (historia == null) {
-            return "redirect:/historias?erro=História não encontrada";
-        }
 
         model.addAttribute("historia", historia);
-        model.addAttribute("usuarioLogado", getUsuarioLogado(request));
 
         return "detalhes"; // templates/historias/detalhes.html
     }
@@ -192,7 +188,7 @@ public class HistoriaController {
 
         // Lógica para filtrar histórias baseada no termoBusca
         if (termoBusca != null && !termoBusca.isEmpty()) {
-           List listaHistorias =  historiaService.buscarPorTermo(termoBusca);
+            List listaHistorias = historiaService.buscarPorTermo(termoBusca);
 
 
             model.addAttribute("listas", listaHistorias); // Substitua com sua busca real
@@ -204,6 +200,12 @@ public class HistoriaController {
 
         // Supondo que a página de biblioteca se chame "biblioteca"
         return "biblioteca";
+    }
+    @GetMapping("/listasLeitura")
+    public String irPraListaDeLeitura() {
+
+    return "listasLeitura";
+    }
 
     }
-}
+

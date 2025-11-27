@@ -6,6 +6,7 @@ import br.folhea.folhea.service.CookieService;
 import br.folhea.folhea.service.UsuarioService;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -14,12 +15,23 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/usuarios")
 public class UsuarioController {
 
+
     private final UsuarioService usuarioService;
     private final UsuarioRepository usuarioRepository;
 
     public UsuarioController(UsuarioService usuarioService, UsuarioRepository usuarioRepository) {
         this.usuarioService = usuarioService;
         this.usuarioRepository = usuarioRepository;
+    }
+
+
+
+
+
+    @GetMapping("/perfil")
+    public String irPerfil(Model model) {
+        
+        return "perfil";
     }
 //    @GetMapping("/registrar")
     //public String telaRegistrar(Model model) {
