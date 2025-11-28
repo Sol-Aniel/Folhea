@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e6611edb-801d-4115-b498-c8ae24fff185" name="Changes" comment="" />
+    <list default="true" id="e6611edb-801d-4115-b498-c8ae24fff185" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/folhea/src/main/java/br/folhea/folhea/controller/LeituraController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/folhea/src/main/java/br/folhea/folhea/model/StatusLeitura.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/folhea/src/main/java/br/folhea/folhea/repository/StatusLeituraRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/folhea/src/main/java/br/folhea/folhea/service/LeituraService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/folhea/src/main/java/br/folhea/folhea/controller/HistoriaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/src/main/java/br/folhea/folhea/controller/HistoriaController.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,6 +22,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -44,7 +53,7 @@
     "Spring Boot.FolheaApplication.executor": "Run",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/cdocl/Desktop/Folhea8/Folhea",
+    "last_opened_file_path": "C:/Users/anyga/OneDrive/Documentos/folhea/Folhea",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -78,13 +87,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.26199.169" />
-      </set>
-    </attachedChunks>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">

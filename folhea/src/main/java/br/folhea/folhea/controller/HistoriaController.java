@@ -179,7 +179,6 @@ public class HistoriaController {
         return "redirect:/historias?sucesso=História deletada";
     }
 
-    // Este método GET é que irá efetivamente processar a URL final
     @GetMapping("/biblioteca")
     public String listarHistoriasPorBusca(
             @RequestParam(value = "busca", required = false) String termoBusca,
