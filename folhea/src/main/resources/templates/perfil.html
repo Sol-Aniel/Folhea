@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title th:text="'Meu Perfil - ' + (${perfil?.nomeExibicao} ?: 'Usuário')">Meu Perfil - [Nome do Usuário]</title>
+    <title th:text="'Meu Perfil - ' + (${perfil?.nome} ?: 'Usuário')"></title>
 
     <link rel="stylesheet" type="text/css" th:href="@{/css/perfil.css}">
     <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
@@ -52,19 +52,10 @@
         <div class="perfil-header">
             <img class="avatar" th:src="@{${perfil?.urlFotoPerfil ?: '/img/avatar-padrao.png'}}" alt="Foto de Perfil">
             <div class="info-basica">
-                <h1 th:text="${perfil?.nomeExibicao}">NomeDoSeuUsuário</h1>
-                <p th:text="'@' + ${perfil?.username}">@seudocenome</p>
+                <h1 th:text="${perfil?.nome}"></h1>
                 <div class="stats">
                     <div>
-                        <span th:text="${perfil?.numSeguidores}">12</span>
-                        <p><a th:href="@{/perfil/seguidores}">Seguidores</a></p>
-                    </div>
-                    <div>
-                        <span th:text="${perfil?.numSeguindo}">25</span>
-                        <p><a th:href="@{/perfil/seguindo}">Seguindo</a></p>
-                    </div>
-                    <div>
-                        <span th:text="${perfil?.numHistorias}">3</span>
+                        <span th:text="${numHitorias}">3</span>
                         <p>Histórias</p>
                     </div>
                 </div>
@@ -87,19 +78,18 @@
         </div>
 
         <div class="perfil-conteudo">
-            <h2 th:text="'Histórias Publicadas (' + (${perfil?.numHistorias} ?: 0) + ')'">Histórias Publicadas (3)</h2>
+            <h2 th:text="'Histórias Publicadas (' + (${numHistorias} ?: 0) + ')'">Histórias Publicadas (3)</h2>
             <div class="galeria">
-                <div class="livro-card" th:each="historia : ${perfil?.historias}">
+                <div class="livro-card" th:each="historia : ${historias}">
                     <a th:href="@{/historia/{id}(id=${historia.id})}">
-                        <img th:src="@{${historia.urlCapa}}" th:alt="${historia.titulo}">
+                        <img th:src="@{${perfil.urlFotoPerfil}}" th:alt="${historia.titulo}">
                     </a>
                     <div class="livro-info">
                         <h3 th:text="${historia.titulo}">O Segredo da Floresta</h3>
-                        <p th:text="${historia.leiturasFormatadas} + ' Leituras'">12k Leituras</p>
                     </div>
                 </div>
 
-                <p th:if="${perfil?.historias == null or perfil.historias.isEmpty()}" class="sem-historias">Nenhuma história publicada ainda. Comece a escrever!</p>
+                <p th:if="${numHistorias == 0}" class="sem-historias">Nenhuma história publicada ainda. Comece a escrever!</p>
             </div>
         </div>
     </div>

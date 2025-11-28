@@ -24,6 +24,12 @@ public class Usuario {
     @Setter
     private String senha;
 
+    @Column(nullable = true, length = 500)
+    private String biografia;
+
+    @Column(nullable = true)
+    private String urlFotoPerfil;
+
     public void setId(long id){
         this.id = id;
     }
@@ -44,6 +50,12 @@ public class Usuario {
         return id;
     }
 
+    public void setBiografia(String biografia) {
+        this.biografia = biografia;
+    }
+    public String getBiografia() {return this.biografia;}
 
+    public void seturlFotoPerfil(String urlFotoPerfil){this.urlFotoPerfil = urlFotoPerfil;}
 
+    public String getUrlFotoPerfil() {return this.urlFotoPerfil;}
 }

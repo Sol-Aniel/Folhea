@@ -43,7 +43,7 @@
                     <path
                         d="M160-200v-80h80v-280q0-83 50-147.5T420-792v-28q0-25 17.5-42.5T480-880q25 0 42.5 17.5T540-820v28q80 20 130 84.5T720-560v280h80v80H160Zm320-300Zm0 420q-33 0-56.5-23.5T400-160h160q0 33-23.5 56.5T480-80ZM320-280h320v-280q0-66-47-113t-113-47q-66 0-113 47t-47 113v280Z" />
                 </svg></a>
-            <a th:href="@{/perfil}"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+            <a th:href="@{/usuarios/perfil}"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
                     width="24px" fill="#1f1f1f">
                     <path
                         d="M234-276q51-39 114-61.5T480-360q69 0 132 22.5T726-276q35-41 54.5-93T800-480q0-133-93.5-226.5T480-800q-133 0-226.5 93.5T160-480q0 59 19.5 111t54.5 93Zm246-164q-59 0-99.5-40.5T340-580q0-59 40.5-99.5T480-720q59 0 99.5 40.5T620-580q0 59-40.5 99.5T480-440Zm0 360q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q53 0 100-15.5t86-44.5q-39-29-86-44.5T480-280q-53 0-100 15.5T294-220q39 29 86 44.5T480-160Zm0-360q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43q0 26 17 43t43 17Zm0-60Zm0 360Z" />
@@ -52,43 +52,38 @@
     </header>
 
     <main>
+        <div th:if="${param.sucesso}" class="alerta-sucesso">
+            <p th:text="${param.sucesso[0]}"></p>
+        </div>
+
+        <div th:if="${param.erro}" class="alerta-erro">
+            <p th:text="${param.erro[0]}"></p>
+        </div>
+
         <div class="biblioteca-section">
-            <h2>Lendo Atualmente (10 Histórias)</h2>
-            <div class="galeria">
-                <div class="livro-card">
-                    <img th:src="@{/img/livro1.jpeg}" alt="Capa do Livro 1">
-                    <div class="livro-info">
-                        <h3>Título do Livro 1</h3>
-                        <p>por Nome do Autor</p>
-                    </div>
-                </div>
-                <div class="livro-card">
-                    <img th:src="@{/img/livro2.jpeg}" alt="Capa do Livro 2">
-                    <div class="livro-info">
-                        <h3>Título do Livro 2</h3>
-                        <p>por Nome do Autor</p>
-                    </div>
-                </div>
-                <div class="livro-card">
-                    <img th:src="@{/img/livro3.jpeg}" alt="Capa do Livro 3">
-                    <div class="livro-info">
-                        <h3>Título do Livro 3</h3>
-                        <p>por Nome do Autor</p>
-                    </div>
-                </div>
-                <div class="livro-card">
-                    <img th:src="@{/img/livro4.jpeg}" alt="Capa do Livro 4">
-                    <div class="livro-info">
-                        <h3>Título do Livro 4</h3>
-                        <p>por Nome do Autor</p>
-                    </div>
-                </div>
-                <div class="livro-card">
-                    <img th:src="@{/img/livro5.jpeg}" alt="Capa do Livro 5">
-                    <div class="livro-info">
-                        <h3>Título do Livro 5</h3>
-                        <p>por Nome do Autor</p>
-                    </div>
+
+            <h2 th:if="${listas != null and listas.size() > 0}">
+                <span th:text="${listas.size()}">0</span> Histórias Encontradas
+            </h2>
+
+            <div th:if="${listas == null or listas.size() == 0}">
+                <h2>Nenhuma história encontrada.</h2>
+                <p>Tente refinar sua busca ou <a th:href="@{/historias/nova}">crie uma nova história</a>!</p>
+            </div>
+
+            <div class="galeria" th:if="${listas != null and listas.size() > 0}">
+                <div class="livro-card" th:each="historia : ${listas}">
+
+                    <a th:href="@{/historias/{id}(id=${historia.id})}">
+
+                        <img th:src="@{/img/livro-padrao.png}" alt="Capa da História">
+
+                        <div class="livro-info">
+                            <h3 th:text="${historia.titulo}">Título Padrão</h3>
+
+                            <p>por <span th:text="${historia.usuario?.nome}">Autor Desconhecido</span></p>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
