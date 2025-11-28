@@ -1,5 +1,5 @@
 package br.folhea.folhea.model;
 
 public enum StatusHistoria {
-    CONCLUIDA, ANDAMENTO, ABANDONADA, PAUSADA
+    Quero_ler, Lida, Abandonada, relendo
 }
