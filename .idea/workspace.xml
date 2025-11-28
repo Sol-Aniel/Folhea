@@ -5,21 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e6611edb-801d-4115-b498-c8ae24fff185" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/folhea/src/main/java/br/folhea/folhea/controller/UsuarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/src/main/java/br/folhea/folhea/controller/UsuarioController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/folhea/src/main/java/br/folhea/folhea/model/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/src/main/java/br/folhea/folhea/model/Usuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/folhea/src/main/java/br/folhea/folhea/service/UsuarioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/src/main/java/br/folhea/folhea/service/UsuarioService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/folhea/src/main/resources/templates/biblioteca.html" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/src/main/resources/templates/biblioteca.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/folhea/src/main/resources/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/src/main/resources/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/folhea/src/main/resources/templates/perfil.html" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/src/main/resources/templates/perfil.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/folhea/target/classes/br/folhea/folhea/controller/HistoriaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/target/classes/br/folhea/folhea/controller/HistoriaController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/folhea/target/classes/br/folhea/folhea/controller/UsuarioController.class" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/target/classes/br/folhea/folhea/controller/UsuarioController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/folhea/target/classes/br/folhea/folhea/model/Usuario.class" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/target/classes/br/folhea/folhea/model/Usuario.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/folhea/target/classes/br/folhea/folhea/repository/UsuarioRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/target/classes/br/folhea/folhea/repository/UsuarioRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/folhea/target/classes/br/folhea/folhea/service/HistoriaService.class" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/target/classes/br/folhea/folhea/service/HistoriaService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/folhea/target/classes/br/folhea/folhea/service/UsuarioService.class" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/target/classes/br/folhea/folhea/service/UsuarioService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/folhea/target/classes/br/folhea/folhea/model/Historia.class" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/target/classes/br/folhea/folhea/model/Historia.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/folhea/target/classes/br/folhea/folhea/model/StatusHistoria.class" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/target/classes/br/folhea/folhea/model/StatusHistoria.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/folhea/target/classes/static/css/detalhes.css" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/target/classes/static/css/detalhes.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/folhea/target/classes/templates/biblioteca.html" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/target/classes/templates/biblioteca.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/folhea/target/classes/templates/perfil.html" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/target/classes/templates/perfil.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/folhea/target/classes/templates/detalhes.html" beforeDir="false" afterPath="$PROJECT_DIR$/folhea/target/classes/templates/detalhes.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
