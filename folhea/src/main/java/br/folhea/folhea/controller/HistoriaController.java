@@ -75,7 +75,7 @@ public class HistoriaController {
             @RequestParam String titulo,
             @RequestParam String sinopse,
             @RequestParam String tag,
-            @RequestParam String conteudoCapitulo,
+            @RequestParam String conteudo,
             HttpServletRequest request,
             Model model
     ) {
@@ -87,17 +87,21 @@ public class HistoriaController {
             Historia h = new Historia();
             h.setTitulo(titulo);
             h.setTag(tag);
-            h.setTextContent(conteudoCapitulo);
+            h.setTextContent(conteudo);
             h.setUsuario(logado);
             h.setSinopse(sinopse);
             h.setTag(tag);
+            h.setAvaliacao(0);
+            h.setCurtidas(0);
+            h.setLeituras(0L);
+            h.setSalvamentos(0);
+
             System.out.println("titulo: '" + titulo + "'");
             System.out.println("sinopse: '" + sinopse + "'");
             System.out.println("tag: '" + tag + "'");
-            System.out.println("conteudo: '" + conteudoCapitulo + "'");
+            System.out.println("conteudo: '" + conteudo + "'");
             System.out.println("usuario: " + logado);
 
-            h.setStatus(StatusHistoria.ANDAMENTO);
 
 
 

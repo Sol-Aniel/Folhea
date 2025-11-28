@@ -15,8 +15,9 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/usuarios")
 public class UsuarioController {
 
-
+    @Autowired
     private final UsuarioService usuarioService;
+    @Autowired
     private final UsuarioRepository usuarioRepository;
 
     public UsuarioController(UsuarioService usuarioService, UsuarioRepository usuarioRepository) {
@@ -26,13 +27,6 @@ public class UsuarioController {
 
 
 
-
-
-    @GetMapping("/perfil")
-    public String irPerfil(Model model) {
-        
-        return "perfil";
-    }
 //    @GetMapping("/registrar")
     //public String telaRegistrar(Model model) {
 //        model.addAttribute("usuario", new Usuario());

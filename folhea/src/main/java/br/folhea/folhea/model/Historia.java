@@ -26,7 +26,7 @@ public class Historia  {
     private String titulo;
 
     @Column(name ="avaliacao")
-    private int avaliacao;
+    private Integer avaliacao;
 
     @Column(name ="text_content")
     private String textContent;
@@ -49,7 +49,15 @@ public class Historia  {
     @Column(name = "sinopse")
     private String sinopse;
 
+    @Column(name="num_leituras")
+    private Long leituras ; // Use Long para estatísticas grandes
 
+
+    @Column(name="num_curtidas")
+    private Integer curtidas ;
+
+    @Column(name="num_salvamentos")
+    private Integer salvamentos;
 
 }
 
