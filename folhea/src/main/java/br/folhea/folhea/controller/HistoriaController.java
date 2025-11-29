@@ -208,19 +208,6 @@ public class HistoriaController {
         // Supondo que a página de biblioteca se chame "biblioteca"
         return "biblioteca";
     }
-    @GetMapping("/listasLeitura")
-    public String irPraListaDeLeitura() {
-
-    return "listasLeitura";
-    }
-
-    @PostMapping("/novaLista")
-    private String CriarNovaLista() {
-        RequestParam nome_lista;
-
-
-        return "criar_lista_nova";
-    }
 
     }
 

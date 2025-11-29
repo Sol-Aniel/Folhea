@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="${lista.nome} ?: 'Detalhes da Lista'"></title>
+
+    <link rel="stylesheet" type="text/css" th:href="@{/css/biblioteca.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/listasLeitura.css}">
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<header>
+    <img th:src="@{/img/logoMenor.png}" alt="Logo">
+    <form class="search-bar" th:action="@{/lista/{id}(id=${lista.id})}" method="GET">
+        <input type="text" name="busca" placeholder="Pesquisar nesta lista...">
+        <button type="submit"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                                   width="24px" fill="#1f1f1f">
+            <path
+                    d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z" />
+        </svg></button>
+    </form>
+
+    <nav>
+        <a th:href="@{/home}">Home SVG...</a>
+        <a th:href="@{/historias/nova}">Nova Hist. SVG...</a>
+        <a th:href="@{/usuarios/perfil}">Perfil SVG...</a>
+    </nav>
+</header>
+
+<main>
+    <div class="lista-header-info">
+        <h1 th:text="${lista.nome}">Nome da Lista Específica</h1>
+        <p th:text="${lista.descricao} ?: 'Nenhuma descrição fornecida.'" class="lista-descricao"></p>
+        <p class="lista-detalhes">
+            <span th:text="${lista.historias?.size() ?: 0}">0</span> Histórias
+        </p>
+        <a th:href="@{/listas}" class="btn-voltar">
+            &lt; Voltar para Minhas Listas
+        </a>
+        <hr>
+    </div>
+
+    <div th:if="${param.sucesso}" class="alerta-sucesso">
+        <p th:text="${param.sucesso[0]}"></p>
+    </div>
+    <div th:if="${param.erro}" class="alerta-erro">
+        <p th:text="${param.erro[0]}"></p>
+    </div>
+
+    <div class="biblioteca-section">
+
+        <h2 th:if="${#lists.isEmpty(historiasDaLista) == false}">
+            Histórias nesta lista
+        </h2>
+
+        <div th:if="${#lists.isEmpty(lista.historias)}" class="sem-listas-msg">
+            <h2>Esta lista está vazia.</h2>
+            <p>Adicione algumas histórias para começar!</p>
+        </div>
+
+        <div class="galeria" th:if="${#lists.isEmpty(lista.historias) == false}">
+
+            <div class="livro-card" th:each="historia : ${lista.historias}">
+
+                <a th:href="@{/historias/{id}(id=${historia.id})}">
+
+                    <img th:src="@{/img/livro-padrao.png}" alt="Capa da História">
+
+                    <div class="livro-info">
+                        <h3 th:text="${historia.titulo}">Título da História</h3>
+
+                        <p>por <span th:text="${historia.usuario?.nome}">Autor Desconhecido</span></p>
+
+                    </div>
+                </a>
+
+                <form th:action="@{/listas/{listaId}/remover/{historiaId}(listaId=${lista.id}, historiaId=${historia.id})}"
+                      method="post"
+                      style="display:inline;">
+                    <button type="submit" class="btn-criar">Remover da lista</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    &copy; 2025 Folhea - Todos os direitos reservados
+</footer>
+</body>
+
+</html>

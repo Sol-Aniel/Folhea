@@ -47,7 +47,7 @@ public class Historia  {
     private String sinopse;
 
     @Column(name="num_leituras")
-    private Long leituras ; // Use Long para estatísticas grandes
+    private Long leituras ;
 
 
     @Column(name="num_curtidas")

@@ -10,6 +10,7 @@
 </head>
 
 <body>
+<<<<<<< Updated upstream
 <header class="flex justify-between items-center p-4 bg-white shadow-md">
     <img th:src="@{/img/logoMenor.png}" alt="Logo">
     <form class="search-bar flex items-center border border-gray-300 rounded-full overflow-hidden">
@@ -43,17 +44,32 @@
 
     <div th:if="${#lists.isEmpty(listas) == false}">
 
+=======
+<main>
+    <h1>
+        Minhas Listas de Leitura
+        <a th:href="@{/historias/nova}" class="btn-nova-lista">+ Nova Lista</a>
+    </h1>
+
+    <div th:if="${#lists.isEmpty(listas) == false}">
+
+>>>>>>> Stashed changes
         <div class="lista-leitura-item" th:each="lista : ${listas}">
             <h2>
                 <a th:href="@{/lista/{id}(id=${lista.id})}">
                     <span th:text="${lista.nome} ?: 'Lista Sem Nome'">Nome da Lista</span>
+<<<<<<< Updated upstream
                     <span th:text="'(' + (${lista.totalHistorias} ?: 0) + ' Histórias)'">(0 Histórias)</span>
+=======
+                    <span th:text="'(' + (${lista.historias.size()} ?: 0) + ' Histórias)'">(0 Histórias)</span>
+>>>>>>> Stashed changes
                 </a>
             </h2>
             <p th:text="${lista.descricao} ?: 'Nenhuma descrição fornecida.'">Descrição da lista, como seu propósito.</p>
 
             <div class="capas-preview">
 
+<<<<<<< Updated upstream
                 <img th:each="capa : ${lista.capasPreview}"
                      th:src="@{${capa.url}}"
                      th:alt="${capa.altText}">
@@ -62,6 +78,23 @@
                         Nenhuma história nesta lista.
                     </span>
             </div>
+=======
+                <img th:each="capa : ${lista.historias}"
+                     th:src="@{${usuario.urlFotoPerfil}}"
+                     th:alt="${capa.titulo}">
+
+                <span th:if="${#lists.isEmpty(lista.historias)}" class="no-covers">
+                        Nenhuma história nesta lista.
+                    </span>
+            </div>
+
+            <form th:action="@{/listas/deletar/{id}(id=${lista.id})}"
+                  method="post"
+                  style="display:inline;">
+                <button type="submit" class="btn-criar">Deletar lista</button>
+            </form>
+
+>>>>>>> Stashed changes
         </div>
     </div>
 

@@ -37,7 +37,8 @@ public class Listaleitura {
 
     @ManyToOne
     @JoinColumn(name = "id_usuario")
-    private Usuario id_suario;
+    private Usuario usuario;
 
+    public void setUsuario(Usuario id_usuario) {}
 
 }
