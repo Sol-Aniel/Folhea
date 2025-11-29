@@ -14,7 +14,7 @@
     <main>
         <h1>Criar Nova Lista de Leitura</h1>
 
-                <form class="formulario-lista" th:action="@{/perfil_listas}" method="POST">
+                <form class="formulario-lista" th:action="@{/historia/listaLeitura}" method="POST">
             
             <div class="form-group">
                 <label for="nome-lista">Nome da Lista</label>
@@ -40,7 +40,7 @@
             
                         <button type="submit" class="btn-criar">Criar Lista</button>
             
-            <a th:href="@{/perfil.html}" class="btn-voltar">Voltar para o Perfil</a>
+            <a th:href="@{usuarios/perfil}" class="btn-voltar">Voltar para o Perfil</a>
             
             <div style="clear: both;"></div>
         </form>
