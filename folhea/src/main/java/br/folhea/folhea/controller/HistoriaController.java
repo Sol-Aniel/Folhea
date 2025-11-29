@@ -7,6 +7,7 @@ import br.folhea.folhea.service.CookieService;
 import br.folhea.folhea.service.HistoriaService;
 import br.folhea.folhea.repository.UsuarioRepository;
 
+import br.folhea.folhea.service.UsuarioService;
 import jakarta.servlet.http.HttpServletRequest;
 
 import org.springframework.stereotype.Controller;
@@ -21,10 +22,12 @@ public class HistoriaController {
 
     private final HistoriaService historiaService;
     private final UsuarioRepository usuarioRepository;
+    private final UsuarioService usuarioService;
 
-    public HistoriaController(HistoriaService historiaService, UsuarioRepository usuarioRepository) {
+    public HistoriaController(HistoriaService historiaService, UsuarioRepository usuarioRepository, UsuarioService usuarioService) {
         this.historiaService = historiaService;
         this.usuarioRepository = usuarioRepository;
+        this.usuarioService = usuarioService;
     }
 
     private Usuario getUsuarioLogado(HttpServletRequest request) {
@@ -209,6 +212,14 @@ public class HistoriaController {
     public String irPraListaDeLeitura() {
 
     return "listasLeitura";
+    }
+
+    @PostMapping("/novaLista")
+    private String CriarNovaLista() {
+        RequestParam nome_lista;
+
+
+        return "criar_lista_nova";
     }
 
     }

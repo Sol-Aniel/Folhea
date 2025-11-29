@@ -19,9 +19,6 @@ public class Historia  {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name="status")
-    private StatusHistoria status;
-
     @Column(name ="titulo")
     private String titulo;
 

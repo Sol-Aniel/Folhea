@@ -14,11 +14,11 @@
     <main>
         <h1>Criar Nova Lista de Leitura</h1>
 
-                <form class="formulario-lista" th:action="@{/perfil_listas}" method="POST">
+                <form class="formulario-lista" th:action="@{/historias/novaLista}" method="POST">
             
             <div class="form-group">
-                <label for="nome-lista">Nome da Lista</label>
-                <input type="text" id="nome-lista" placeholder="Ex: Livros de Fantasia para o Inverno" required>
+                <label for="nome_lista">Nome da Lista</label>
+                <input type="text" name="nome_lista" id="nome_lista" placeholder="Ex: Livros de Fantasia para o Inverno" required>
             </div>
 
             <div class="form-group">
