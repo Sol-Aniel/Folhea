@@ -55,8 +55,9 @@ Este repositório contém o código-fonte do projeto desenvolvido para a discipl
 - **4º Bimestre:** Aplicação completa com todas as funcionalidades descritas e apresentação em vídeo.
 
 ---
-## Protótipo Figma
-https://github.com/Sol-Aniel/Folhea/tree/main
+## Video do Grupo
+
+https://drive.google.com/file/d/1td05ei9yUV0C3WuPz4YjEYt9DpRcjg7d/view?usp=sharing
 
 ## Instruções para Configuração e Execução
 
