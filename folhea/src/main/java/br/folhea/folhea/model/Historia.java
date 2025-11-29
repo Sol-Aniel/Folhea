@@ -19,6 +19,9 @@ public class Historia  {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(name="status")
+    private StatusHistoria status;
+
     @Column(name ="titulo")
     private String titulo;
 
@@ -47,7 +50,7 @@ public class Historia  {
     private String sinopse;
 
     @Column(name="num_leituras")
-    private Long leituras ;
+    private Long leituras ; // Use Long para estatísticas grandes
 
 
     @Column(name="num_curtidas")

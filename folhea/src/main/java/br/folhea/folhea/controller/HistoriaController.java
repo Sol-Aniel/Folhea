@@ -66,7 +66,7 @@ public class HistoriaController {
 
         Usuario logado = getUsuarioLogado(request);
         //if (logado == null)
-          //  return "redirect:/login";
+        //  return "redirect:/login";
 
         model.addAttribute("historia", new Historia());
         model.addAttribute("usuarioLogado", logado);
@@ -209,5 +209,4 @@ public class HistoriaController {
         return "biblioteca";
     }
 
-    }
-
+}

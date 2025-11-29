@@ -49,4 +49,12 @@ public class UsuarioService {
 
         throw new RuntimeException("Email ou senha inválidos.");
     }
+
+    public Usuario findById(Long id) {
+        return usuarioRepository.findById(id).get();
+    }
+
+    public Usuario findUsuarioLogged(long id) {
+        return usuarioRepository.findById(id).get();
+    }
 }

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title th:text="'Meu Perfil - ' + (${perfil?.nomeExibicao} ?: 'Usuário')">Meu Perfil - [Nome do Usuário]</title>
+    <title th:text="'Meu Perfil - ' + (${perfil?.nome} ?: 'Usuário')"></title>
 
     <link rel="stylesheet" type="text/css" th:href="@{/css/perfil.css}">
     <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
@@ -13,7 +13,7 @@
 
 <body>
 <header>
-    <img th:src="@{/img/logoMenor.png}" alt="Logo">
+    <img th:src="@{/images/logoMenor.png}" alt="Logo">
     <form class="search-bar" th:action="@{/busca}" method="GET">
         <input type="text" name="busca" placeholder="Pesquisar...">
         <button type="submit">
@@ -29,7 +29,7 @@
                 <path d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z" />
             </svg>
         </a>
-        <a th:href="@{/historias/listasLeitura}">
+        <a th:href="@{/listas}">
             <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f">
                 <path d="M240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h480q33 0 56.5 23.5T800-800v640q0 33-23.5 56.5T720-80H240Zm0-80h480v-640h-80v280l-100-60-100 60v-280H240v640Zm0 0v-640 640Zm200-360 100-60 100 60-100-60-100 60Z" />
             </svg>
@@ -48,19 +48,10 @@
         <div class="perfil-header">
             <img class="avatar" th:src="@{${perfil?.urlFotoPerfil ?: '/img/avatar-padrao.png'}}" alt="Foto de Perfil">
             <div class="info-basica">
-                <h1 th:text="${perfil?.nomeExibicao}">NomeDoSeuUsuário</h1>
-                <p th:text="'@' + ${perfil?.username}">@seudocenome</p>
+                <h1 th:text="${perfil?.nome}"></h1>
                 <div class="stats">
                     <div>
-                        <span th:text="${perfil?.numSeguidores}">12</span>
-                        <p><a th:href="@{/perfil/seguidores}">Seguidores</a></p>
-                    </div>
-                    <div>
-                        <span th:text="${perfil?.numSeguindo}">25</span>
-                        <p><a th:href="@{/perfil/seguindo}">Seguindo</a></p>
-                    </div>
-                    <div>
-                        <span th:text="${perfil?.numHistorias}">3</span>
+                        <span th:text="${numHitorias}">3</span>
                         <p>Histórias</p>
                     </div>
                 </div>
@@ -83,19 +74,18 @@
         </div>
 
         <div class="perfil-conteudo">
-            <h2 th:text="'Histórias Publicadas (' + (${perfil?.numHistorias} ?: 0) + ')'">Histórias Publicadas (3)</h2>
+            <h2 th:text="'Histórias Publicadas (' + (${numHistorias} ?: 0) + ')'">Histórias Publicadas (3)</h2>
             <div class="galeria">
-                <div class="livro-card" th:each="historia : ${perfil?.historias}">
-                    <a th:href="@{/historia/{id}(id=${historia.id})}">
-                        <img th:src="@{${historia.urlCapa}}" th:alt="${historia.titulo}">
+                <div class="livro-card" th:each="historia : ${historias}">
+                    <a th:href="@{/historias/{id}(id=${historia.id})}">
+                        <img th:src="@{${perfil.urlFotoPerfil}}" th:alt="${historia.titulo}">
                     </a>
                     <div class="livro-info">
                         <h3 th:text="${historia.titulo}">O Segredo da Floresta</h3>
-                        <p th:text="${historia.leiturasFormatadas} + ' Leituras'">12k Leituras</p>
                     </div>
                 </div>
 
-                <p th:if="${perfil?.historias == null or perfil.historias.isEmpty()}" class="sem-historias">Nenhuma história publicada ainda. Comece a escrever!</p>
+                <p th:if="${numHistorias == 0}" class="sem-historias">Nenhuma história publicada ainda. Comece a escrever!</p>
             </div>
         </div>
     </div>

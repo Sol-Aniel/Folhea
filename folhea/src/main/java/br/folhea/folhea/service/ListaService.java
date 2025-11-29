@@ -21,8 +21,8 @@ public class ListaService {
     private final HistoriaRepository historiaRepository;
 
     public ListaService(ListaRepository listaRepository,
-                               UsuarioRepository usuarioRepository,
-                               HistoriaRepository historiaRepository) {
+                        UsuarioRepository usuarioRepository,
+                        HistoriaRepository historiaRepository) {
         this.listaRepository = listaRepository;
         this.usuarioRepository = usuarioRepository;
         this.historiaRepository = historiaRepository;

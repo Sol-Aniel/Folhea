@@ -2,7 +2,6 @@ package br.folhea.folhea.model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotEmpty;
-import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -10,30 +9,53 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-@Data
+
 @Entity
 public class Usuario {
-    @Setter
-    @Getter
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
     private long id;
-    @Getter
     @Setter
     @NotEmpty
     private String nome;
-    @Getter
     @Setter
     private String email;
-    @Getter
     @Setter
     private String senha;
 
+    @Column(nullable = true, length = 500)
+    private String biografia;
 
-    @ElementCollection
-    @CollectionTable(name = "usuario_lista_leitura", joinColumns = @JoinColumn(name = "usuario_id"))
-    @Column(name = "nome_historia")
-    private List<Long> historia;
+    @Column(nullable = true)
+    private String urlFotoPerfil;
 
+    public void setId(long id){
+        this.id = id;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getSenha() {
+        return senha;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setBiografia(String biografia) {
+        this.biografia = biografia;
+    }
+    public String getBiografia() {return this.biografia;}
+
+    public void seturlFotoPerfil(String urlFotoPerfil){this.urlFotoPerfil = urlFotoPerfil;}
+
+    public String getUrlFotoPerfil() {return this.urlFotoPerfil;}
 }
